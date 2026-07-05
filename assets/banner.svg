@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" role="img" aria-label="TrustDesk — security questionnaires answered from evidence, never guessed">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" role="img" aria-label="TrustDeck — security questionnaires answered from evidence, never guessed">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0d1b2a"/>
@@ -19,7 +19,7 @@
   </g>
   <!-- wordmark -->
   <text x="216" y="92" font-family="Segoe UI, Helvetica, Arial, sans-serif"
-        font-size="52" font-weight="700" fill="#f5f7fa">TrustDesk</text>
+        font-size="52" font-weight="700" fill="#f5f7fa">TrustDeck</text>
   <text x="218" y="128" font-family="Segoe UI, Helvetica, Arial, sans-serif"
         font-size="19" fill="#9fb3c8">Security questionnaires, answered from your evidence — never guessed.</text>
   <!-- confidence legend -->

@@ -37,7 +37,7 @@ interviewer that builds the corpus in the first place.
 
 ## Onboarding
 
-Run [trustdesk-onboarding-interview.md](../trustdesk-onboarding-interview.md):
+Run [trustdeck-onboarding-interview.md](../trustdeck-onboarding-interview.md):
 Tier 1 (~20 min) first, Tier 2 (~25 min) before any CAIQ-class
 questionnaire, Tier 3 if buyers ask about AI. One domain at a time,
 never a question dump. "We don't have that" is a valid answer — log it and

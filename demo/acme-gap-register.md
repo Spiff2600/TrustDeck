@@ -1,4 +1,4 @@
-# TrustDesk Gap Register
+# TrustDeck Gap Register
 
 > **DEMO — Acme sample data.** For demo mode only. This register logs questions
 > where the Trust Corpus has PARTIAL or NONE evidence, flagging them for human

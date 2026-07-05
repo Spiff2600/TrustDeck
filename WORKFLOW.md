@@ -1,4 +1,4 @@
-# TrustDesk — Code Workflow
+# TrustDeck — Code Workflow
 
 ## Branch Strategy
 - All work happens on feature branches named `feat/<short-description>`

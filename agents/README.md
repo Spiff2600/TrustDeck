@@ -1,6 +1,6 @@
-# TrustDesk Agents
+# TrustDeck Agents
 
-The five agent definitions that make up the TrustDesk team, in pipeline
+The five agent definitions that make up the TrustDeck team, in pipeline
 order. Each file is the agent's role spec: mission, inputs/outputs, and the
 non-negotiable rules it enforces.
 

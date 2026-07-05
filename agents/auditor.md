@@ -3,7 +3,7 @@
 ## Mission
 
 Assume every draft is wrong and try to prove it. The Auditor is the reason
-TrustDesk can promise zero fabrications: nothing reaches the owner until a
+TrustDeck can promise zero fabrications: nothing reaches the owner until a
 hostile reviewer has failed to break it.
 
 ## Inputs / Outputs

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="TrustDesk — security questionnaires, answered from your evidence, never guessed" width="880"/>
+  <img src="assets/banner.svg" alt="TrustDeck — security questionnaires, answered from your evidence, never guessed" width="880"/>
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@ Enterprise deal on the line, and procurement just sent a 212-question
 security questionnaire. That's 10–15 hours of your week — $1,000+ of anyone's
 time — and it'll happen again next month.
 
-**TrustDesk** is a five-agent team that answers vendor security
+**TrustDeck** is a five-agent team that answers vendor security
 questionnaires — CAIQ, SIG, and custom Excel monsters — from **your actual
 documentation**, and refuses to answer anything it can't prove. Every answer
 carries an inline citation to the policy it came from, and a hostile
@@ -87,9 +87,9 @@ The repo ships a complete worked example against a fictional company:
    [run 2](demo/acme-demo-completed-run2.csv) hits 13/15 🟢 with a ~2-minute
    review.
 
-To run TrustDesk on your own questionnaires: install it from the marketplace
+To run TrustDeck on your own questionnaires: install it from the marketplace
 listing, try demo mode, then let the Librarian run the
-[20-minute onboarding interview](trustdesk-onboarding-interview.md) to build
+[20-minute onboarding interview](trustdeck-onboarding-interview.md) to build
 your real Trust Corpus. Tier 1 handles short questionnaires the same day;
 Tier 1+2 (~45 min total) covers all 17 CCM v4 domains — full CAIQ class.
 
@@ -100,14 +100,14 @@ Tier 1+2 (~45 min total) covers all 17 CCM v4 domains — full CAIQ class.
 | [agents/](agents/) | The five agent role specs and the pipeline's shared rules |
 | [demo/](demo/) | The complete worked example: corpus, questionnaire (csv+xlsx), answers, auditor verdicts, coverage memos, gap register, answer library |
 | [benchmark/](benchmark/) | CAIQ-Lite (124 questions), the filled-in cold run, and the cold vs onboarded memos |
-| [trustdesk-onboarding-interview.md](trustdesk-onboarding-interview.md) | The 46-question interview that builds your Trust Corpus, mapped to CCM v4 / SOC 2 / ISO 27001 / NIST CSF |
+| [trustdeck-onboarding-interview.md](trustdeck-onboarding-interview.md) | The 46-question interview that builds your Trust Corpus, mapped to CCM v4 / SOC 2 / ISO 27001 / NIST CSF |
 | [marketplace-listing.md](marketplace-listing.md) | Listing copy and FAQ |
 | [scripts/](scripts/) | `check_consistency.py` — the CI-enforced cross-artifact number checks |
 | [SECURITY.md](SECURITY.md) | Data handling: what to upload, what never to, and how demo data is isolated |
 
 ## Ground rules
 
-- **TrustDesk drafts; you approve.** It will never fabricate a control you
+- **TrustDeck drafts; you approve.** It will never fabricate a control you
   don't have — that's the point.
 - All Acme data is fictional and watermarked "DEMO — Acme sample data." It is
   never cited on a real run.

@@ -1,11 +1,11 @@
 # Data Handling & Security
 
-TrustDesk exists because security questionnaires are about trust — so here is
+TrustDeck exists because security questionnaires are about trust — so here is
 exactly how it treats yours.
 
 ## Where your data lives
 
-- **Your Trust Corpus stays in your environment.** TrustDesk reads the
+- **Your Trust Corpus stays in your environment.** TrustDeck reads the
   documents you give it inside your own workspace; nothing in this repo, and
   nothing in the product, ships your corpus anywhere else.
 - **The Answer Library is yours.** It's a file in your workspace, built from
@@ -24,7 +24,7 @@ your completed onboarding interview.
   (upload the executive summary instead)
 - Customer data or anything covered by your own confidentiality obligations
 
-TrustDesk answers questionnaires from *descriptions of your controls*, not
+TrustDeck answers questionnaires from *descriptions of your controls*, not
 from the sensitive material itself. If a document would hurt you leaked, it
 doesn't belong in the corpus — and it isn't needed there.
 

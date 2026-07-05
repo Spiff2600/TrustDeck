@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Cross-artifact consistency checks for the TrustDesk demo & benchmark data.
+"""Cross-artifact consistency checks for the TrustDeck demo & benchmark data.
 
 Every number in a memo, register, or library must reconcile with the artifact
 it is derived from. This is the repo's test suite — a product that promises

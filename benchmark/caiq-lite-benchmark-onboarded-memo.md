@@ -1,4 +1,4 @@
-📋 TRUSTDESK COVERAGE MEMO — CAIQ-Lite Benchmark, Onboarded Run
+📋 TRUSTDECK COVERAGE MEMO — CAIQ-Lite Benchmark, Onboarded Run
 > **DEMO — Acme sample data.** CAIQ-Lite (124 questions) × Acme Trust Corpus
 > v2.0 (after the 44-question Tier 1+2 onboarding interview, ~45 minutes).
 File: caiq-lite-benchmark.csv — 124 questions · Pipeline run: ~14 min

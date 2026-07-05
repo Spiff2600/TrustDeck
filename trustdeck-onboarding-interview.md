@@ -1,4 +1,4 @@
-# TrustDesk Onboarding Interview v2
+# TrustDeck Onboarding Interview v2
 
 **Supersedes v1.** Upload this file to the team as a knowledge document; the
 Librarian runs it. v1's 20 questions are unchanged (Tier 1); Tier 2 adds 24

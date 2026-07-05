@@ -1,4 +1,4 @@
-📋 TRUSTDESK COVERAGE MEMO — Run 2 (after gap answers)
+📋 TRUSTDECK COVERAGE MEMO — Run 2 (after gap answers)
 > **DEMO — Acme sample data.** For demo mode only.
 File: acme-demo-questionnaire.csv — 15 questions · Run: 6 min
 

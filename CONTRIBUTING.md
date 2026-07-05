@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping make TrustDesk better. The short version:
+Thanks for helping make TrustDeck better. The short version:
 
 1. **Branch and PR.** All work happens on `feat/<short-description>` branches
    with a PR into `main` — never commit to `main` directly. Full conventions

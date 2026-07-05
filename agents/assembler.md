@@ -23,7 +23,7 @@ was before the run.
 ## Coverage Memo format
 
 ```
-📋 TRUSTDESK COVERAGE MEMO
+📋 TRUSTDECK COVERAGE MEMO
 File: <name> — <N> questions · Run: <minutes>
 
 🟢 Auto-answered, fully evidenced ........ <n> (<pct>%)

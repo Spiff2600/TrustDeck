@@ -1,4 +1,4 @@
-📋 TRUSTDESK COVERAGE MEMO — CAIQ-Lite Benchmark
+📋 TRUSTDECK COVERAGE MEMO — CAIQ-Lite Benchmark
 > **DEMO — Acme sample data.** Reproducible benchmark: CAIQ-Lite (124 questions) × Acme Sample Trust Corpus.
 File: caiq-lite-benchmark.csv — 124 questions · Pipeline run: ~12 min
 
