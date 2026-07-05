@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Spiff2600/TrustDesk/actions/workflows/consistency.yml"><img src="https://github.com/Spiff2600/TrustDesk/actions/workflows/consistency.yml/badge.svg" alt="consistency checks"/></a>
+  <a href="https://github.com/Spiff2600/TrustDeck/actions/workflows/consistency.yml"><img src="https://github.com/Spiff2600/TrustDeck/actions/workflows/consistency.yml/badge.svg" alt="consistency checks"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license"/></a>
   <img src="https://img.shields.io/badge/CAIQ--Lite-124%20questions-1f3864.svg" alt="CAIQ-Lite: 124 questions"/>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-3ddc84.svg" alt="PRs welcome"/></a>
