@@ -2,13 +2,13 @@
 > **DEMO — Acme sample data.** For demo mode only.
 File: acme-demo-questionnaire.csv — 15 questions · Run: 8 min
 
-🟢 Auto-answered, fully evidenced ........ 11 (73%)
-🟡 Drafted, needs your confirmation ....... 0 (0%)
-🔴 Needs your input ....................... 6 (40%)
+🟢 Auto-answered, fully evidenced ........ 9 (60%)
+🟡 Drafted, needs your confirmation ....... 4 (27%)
+     → 4 evidenced answers, each with one unevidenced sub-question
+🔴 Needs your input ....................... 2 (13%)
      → 2 legal/insurance (routed human-only)
-     → 4 no evidence in corpus
 
-Your review time: ~24 min   (manual baseline: ~60 min)
+Your review time: ~12 min   (manual baseline: ~60 min)
 
 New gaps logged — answer once, reuse forever:
 1. Q3 — Customer-managed keys (CMK) support not documented. Confirm whether supported and describe mechanism.

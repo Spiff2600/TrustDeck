@@ -38,7 +38,7 @@ Each entry: `[Date] | Q<id> | <Domain> | <Strength> | <Detail>`
 | CAIQ Domain | Questions | Reason |
 |---|---|---|
 | Change Control (CCC) | CAIQ-033 to CAIQ-039 (7) | No evidence in corpus — Acme has no change control policy |
-| Application Security (AIS) | CAIQ-011 to CAIQ-022 (12) | No SAST/SCA/SBOM/secrets scanning/vuln disclosure — Acme only has pen testing |
+| Application Security (AIS) | CAIQ-011 to CAIQ-019, CAIQ-021 to CAIQ-022 (11) | No SAST/SCA/SBOM/secrets scanning/vuln disclosure — Acme only has pen testing |
 | Data Privacy (DSP) | CAIQ-050-051, 055-057, 062 (6) | No data classification, flow diagrams, DLP, or regulated data specifics |
 | Governance (GRC) | CAIQ-066-067 (2) | No policy exception process documented |
 | HR Security (HRS) | CAIQ-070, 074-075 (3) | No background check scope, contractor details, or clear desk policy |

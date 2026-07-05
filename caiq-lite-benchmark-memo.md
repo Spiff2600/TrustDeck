@@ -12,7 +12,7 @@ Your review time: ~272 min   (manual baseline: ~496 min)
 
 New gaps logged — answer once, reuse forever:
 68 gaps across 16 domains. Major areas needing corpus enrichment:
-1. AppSec (12) — SAST, SCA, SBOM, secrets scanning, vulnerability disclosure
+1. AppSec (11) — SAST, SCA, SBOM, secrets scanning, vulnerability disclosure
 2. Change Control (7) — CI/CD pipeline, emergency change, IaC, drift detection
 3. Infrastructure (5) — vuln scanning cadence, patching, WAF/DDoS, default-deny
 4. Supply Chain (5) — vendor assessment, breach notification, SBOM
