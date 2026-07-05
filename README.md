@@ -105,6 +105,21 @@ Tier 1+2 (~45 min total) covers all 17 CCM v4 domains — full CAIQ class.
 | [scripts/](scripts/) | `check_consistency.py` — the CI-enforced cross-artifact number checks |
 | [SECURITY.md](SECURITY.md) | Data handling: what to upload, what never to, and how demo data is isolated |
 
+## Early adopters
+
+TrustDeck is at launch pricing — the first cohort gets it cheap in exchange
+for being early, and the price doubles once they're in. Two ways early users
+shape the product:
+
+- **[📊 Share your results](../../issues/new?template=share-results.md)** —
+  post your Coverage Memo numbers from a real run (stats only, nothing
+  confidential). Real-world results are the one proof this repo's demo can't
+  generate, and the best ones go in the listing.
+- **[🚨 Report a fabrication](../../issues/new?template=report-fabrication.md)** —
+  if TrustDeck ever claims something your evidence doesn't support, that
+  report is a release blocker. Holding us to the zero-fabrication promise is
+  the whole point.
+
 ## Ground rules
 
 - **TrustDeck drafts; you approve.** It will never fabricate a control you
