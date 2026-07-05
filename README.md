@@ -31,12 +31,18 @@ Auditor agent red-teams every draft for overclaims before you ever see it.
 | [Demo, run 2](demo/acme-coverage-memo-run2.md) (6 gaps answered once) | 15 | 13 (87%) | 2 | 0 | ~2 min |
 | [CAIQ-Lite, cold](benchmark/caiq-lite-benchmark-memo.md) (12-doc corpus) | 124 | 56 (45%) | 0 | 68 | ~272 min |
 | [CAIQ-Lite, onboarded](benchmark/caiq-lite-benchmark-onboarded-memo.md) (after 45-min interview) | 124 | 118 (95%) | 4 | 2 | ~12 min |
+| [Relay demo](relay-coverage-memo.md) (run live by the deployed product) | 15 | 9 (60%) | 4 | 2 | ~12 min |
 
 Zero fabrications in every run — including honest, documented "no" answers
 (no bug bounty, no SBOMs, no CMK). An evidenced "no" is a 🟢, because
 auditors trust vendors who know what they don't have.
 
-All benchmark data is fictional demo data (Acme Analytics, Inc.), watermarked
+The Relay run is special: it was produced end-to-end by the deployed
+product — a live onboarding interview followed by the full pipeline,
+including two overclaims the Auditor caught and removed
+([relay-auditor-verdict.json](relay-auditor-verdict.json), Q5 and Q10).
+
+All benchmark data is fictional demo data (Acme and Relay), watermarked
 and reproducible from the files in this repo — and
 [checked in CI](.github/workflows/consistency.yml): every memo, register, and
 library must reconcile, or the build fails. We audit our own numbers the way
@@ -103,6 +109,7 @@ Tier 1+2 (~45 min total) covers all 17 CCM v4 domains — full CAIQ class.
 |---|---|
 | [agents/](agents/) | The five agents' public contracts and the pipeline's shared rules (full role specs ship with the product) |
 | [demo/](demo/) | The complete worked example: corpus, questionnaire (csv+xlsx), answers, auditor verdicts, coverage memos, gap register, answer library |
+| relay-*.md/.csv/.json | The second worked example — Relay Field Systems, produced live by the deployed product (interview results, corpus, verdicts, completed questionnaire, memo) |
 | [benchmark/](benchmark/) | CAIQ-Lite (124 questions), the filled-in cold run, and the cold vs onboarded memos |
 | [trustdeck-onboarding-interview.md](trustdeck-onboarding-interview.md) | Tier 1 of the onboarding interview, published in full (Tiers 2–3 and the CCM v4 / SOC 2 / ISO 27001 / NIST CSF coverage map ship with the product) |
 | [marketplace-listing.md](marketplace-listing.md) | Listing copy and FAQ |
