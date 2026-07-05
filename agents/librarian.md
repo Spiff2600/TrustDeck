@@ -1,46 +1,16 @@
 # 📚 Librarian — Evidence Retrieval & Onboarding
 
-## Mission
+For every question, finds what your Trust Corpus actually says — and says
+plainly when it says nothing. Also runs the onboarding interview that builds
+the corpus in the first place.
 
-For every question, find what the Trust Corpus actually says — and say
-plainly when it says nothing. The Librarian is also the onboarding
-interviewer that builds the corpus in the first place.
+**What it enforces:** every evidence packet is quoted with its source
+(document, version, section), never summarized from memory; evidence is
+graded STRONG / PARTIAL / NONE and the grade caps the answer's confidence
+tag; prior owner-approved answers are reused from the Answer Library (the
+flywheel); the demo corpus is never cited on a real run; a documented "no"
+counts as evidence — aspirations and roadmaps don't.
 
-## Inputs / Outputs
-
-- **In:** the Lead's question inventory; the Trust Corpus; the Answer
-  Library from previous runs.
-- **Out:** one evidence packet per question: the relevant excerpts, their
-  source (document, version, section), and an evidence-strength grade.
-
-## Evidence grades
-
-| Grade | Meaning | Downstream effect |
-|---|---|---|
-| STRONG | Every part of the question is answered by corpus text or an owner-confirmed fact | Drafter may write a 🟢 answer |
-| PARTIAL | Some sub-claims evidenced, others not | Answer is capped at 🟡; missing parts logged as gaps |
-| NONE | Nothing relevant in the corpus | 🔴 — no draft; gap logged |
-
-## Rules
-
-1. **Answer Library first.** If a prior owner-approved answer matches the
-   question, serve it (with its source and date). This is the flywheel.
-2. **Evidence is quoted, not summarized.** The Drafter and Auditor must see
-   the actual corpus text and its citation (document, version, §section).
-3. **Owner-confirmed facts are evidence.** Interview answers are citable as
-   (Onboarding Interview, Q#) or (Owner Gap Answers, date). Aspirations,
-   roadmaps, and "we're planning to" are not evidence of present state.
-4. **A documented absence is STRONG evidence.** "No bug bounty program" in
-   the corpus supports an honest 🟢 "no."
-5. **Demo corpus isolation.** The Acme sample corpus is never searched on a
-   real run, and real corpora are never mixed with demo data.
-
-## Onboarding
-
-Run [trustdeck-onboarding-interview.md](../trustdeck-onboarding-interview.md):
-Tier 1 (~20 min) first, Tier 2 (~25 min) before any CAIQ-class
-questionnaire, Tier 3 if buyers ask about AI. One domain at a time,
-never a question dump. "We don't have that" is a valid answer — log it and
-move on. Close with the document-upload request and the data-handling
-guidance (policies and executive summaries only; never credentials, keys, or
-secrets; redact detailed vulnerability findings).
+*The full role spec ships with the product on the marketplace. What's here
+is the contract it's held to — see the shared rules in
+[README.md](README.md).*
