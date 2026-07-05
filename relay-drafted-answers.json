@@ -1,0 +1,137 @@
+[
+  {
+    "question_id": "Q1",
+    "answer_text": "Relay Field Systems, Inc. is a Delaware C-corp providing B2B SaaS work-order dispatch and technician scheduling for mid-market trade contractors (HVAC, electrical, plumbing). The company has 85 employees with a hybrid model — Denver HQ and ~60% remote. Customer data is hosted on Microsoft Azure (East US 2 primary, Central US for DR), with production, staging, and dev in separate Azure subscriptions and VNets.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q1 (Relay Field Systems)", "section": "Q1 — Company overview" },
+      { "source": "Onboarding Interview, Q2 (Relay Field Systems)", "section": "Q2 — Hosting & environment separation" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q2",
+    "answer_text": "SOC 2 Type II report issued February 2026, covering January through December 2025, with one exception noted (change-management evidence gap) which was remediated in Q3 2025. ISO 27001 is not held — certification is targeted for 2027. No HIPAA or PCI DSS scope.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q3 (Relay Field Systems)", "section": "Q3 — Certifications" },
+      { "source": "Onboarding Interview, Q3 (Relay Field Systems)", "section": "Q3 — ISO 27001" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q3",
+    "answer_text": "Customer data at rest is encrypted with AES-256 via Azure Storage encryption and SQL TDE, with keys in Azure Key Vault and automatic annual rotation. Data in transit is protected with TLS 1.2 minimum (TLS 1.3 preferred) and HSTS on all public endpoints. Customer-managed keys (CMK/BYOK) are supported on the Enterprise tier via customer-held Azure Key Vault.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q7 (Relay Field Systems)", "section": "Q7 — Encryption at rest" },
+      { "source": "Onboarding Interview, Q8 (Relay Field Systems)", "section": "Q8 — Encryption in transit" },
+      { "source": "Onboarding Interview, Q9 (Relay Field Systems)", "section": "Q9 — Customer-managed keys" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q4",
+    "answer_text": "Yes — SSO via Microsoft Entra ID with MFA enforced for all employees and contractors. FIDO2 security keys are required for administrative accounts.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q5 (Relay Field Systems)", "section": "Q5 — SSO & MFA" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q5",
+    "answer_text": "Access reviews are conducted quarterly, with privileged roles reviewed monthly. On termination, access is revoked within 8 business hours via Microsoft Entra lifecycle workflows. Access follows RBAC with least-privilege principles.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q6 (Relay Field Systems)", "section": "Q6 — Access reviews & offboarding" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q6",
+    "answer_text": "Penetration testing is performed annually. The most recent test was conducted in January 2026 by Kestrel Security. No critical findings were identified; one high-severity finding (SSRF in webhook handler) was remediated within 21 days and confirmed via retest.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q4 (Relay Field Systems)", "section": "Q4 — Penetration testing" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q7",
+    "answer_text": "Log retention is set at 13 months. Application and platform logs are sent to Azure Monitor with Microsoft Sentinel SIEM and analytics rules. Whether retention can be extended beyond 13 months per customer request is not documented — NEEDS OWNER INPUT: confirm whether extended retention is supported and the mechanism for enabling it.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q16 (Relay Field Systems)", "section": "Q16 — Logging & monitoring" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q8",
+    "answer_text": "Yes, a documented incident response plan v3.1 is maintained with a severity matrix and 24/7 on-call rotation. Affected customers are notified within 72 hours of a confirmed breach involving their data.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q17 (Relay Field Systems)", "section": "Q17 — Incident response" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q9",
+    "answer_text": "Backups use continuous geo-redundant replication plus nightly encrypted backups. Target RTO is 12 hours and target RPO is 1 hour. The most recent disaster recovery failover test was conducted on March 19, 2026 and passed — production was restored in Central US in 9 hours and 40 minutes. Restore tests are performed quarterly.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q18 (Relay Field Systems)", "section": "Q18 — Backups & DR" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q10",
+    "answer_text": "Background checks are performed on all new hires via Sterling, covering criminal, identity, and employment verification (US). Annual security awareness training and quarterly phishing simulations are also conducted. NDAs are signed by all staff and contractors.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q19 (Relay Field Systems)", "section": "Q19 — Background checks" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q11",
+    "answer_text": "Endpoint protections include Microsoft Intune MDM on all devices, full-disk encryption (BitLocker on Windows, FileVault on macOS), and Microsoft Defender for Endpoint (EDR) deployed fleet-wide.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q15 (Relay Field Systems)", "section": "Q15 — Endpoint security" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q12",
+    "answer_text": "Subprocessors with access to customer data: Microsoft Azure (hosting), Stripe (billing), Twilio (SMS dispatch notifications), HubSpot (CRM/support), and Google Workspace (email/docs). A Data Processing Agreement with GDPR Standard Contractual Clauses is available on request.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q12 (Relay Field Systems)", "section": "Q12 — Subprocessors" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q13",
+    "answer_text": "A DPA with GDPR Standard Contractual Clauses is available on request. CCPA requests can be submitted to privacy@relayfield.example. A dedicated Data Protection Officer has not been appointed — NEEDS OWNER INPUT: confirm whether a DPO has been appointed or if this responsibility is assigned to another role.",
+    "confidence_tag": "🟢",
+    "citations": [
+      { "source": "Onboarding Interview, Q12 (Relay Field Systems)", "section": "Q12 — DPA & privacy" }
+    ],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q14",
+    "answer_text": "NEEDS OWNER INPUT — Cyber liability insurance details (carrier and per-incident coverage amount) are not stored in the Trust Corpus. No draft available.",
+    "confidence_tag": "🔴",
+    "citations": [],
+    "_watermark": "DEMO — Relay sample data"
+  },
+  {
+    "question_id": "Q15",
+    "answer_text": "NEEDS OWNER INPUT — Indemnification terms for breach of systems are not stored in the Trust Corpus (legal/contractual domain). No draft available.",
+    "confidence_tag": "🔴",
+    "citations": [],
+    "_watermark": "DEMO — Relay sample data"
+  }
+]

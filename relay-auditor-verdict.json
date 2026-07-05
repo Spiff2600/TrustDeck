@@ -1,0 +1,92 @@
+[
+  {
+    "question_id": "Q1",
+    "verdict": "approved",
+    "final_text": "Relay Field Systems, Inc. is a Delaware C-corp providing B2B SaaS work-order dispatch and technician scheduling for mid-market trade contractors (HVAC, electrical, plumbing). The company has 85 employees with a hybrid model — Denver HQ and ~60% remote. Customer data is hosted on Microsoft Azure (East US 2 primary, Central US for DR), with production, staging, and dev in separate Azure subscriptions and VNets.",
+    "one_line_note": "All details match STRONG evidence — Azure (not GCP), Denver (not Austin), 85 emp (not 86), Entra ID ecosystem. No overclaim."
+  },
+  {
+    "question_id": "Q2",
+    "verdict": "approved",
+    "final_text": "SOC 2 Type II report issued February 2026, covering January through December 2025, with one exception noted (change-management evidence gap) which was remediated in Q3 2025. ISO 27001 is not held — certification is targeted for 2027. No HIPAA or PCI DSS scope.",
+    "one_line_note": "SOC 2 exception correctly identified as change-management gap (not offboarding). ISO 27001 correctly stated as NOT held. No overclaim of certification."
+  },
+  {
+    "question_id": "Q3",
+    "verdict": "approved",
+    "final_text": "Customer data at rest is encrypted with AES-256 via Azure Storage encryption and SQL TDE, with keys in Azure Key Vault and automatic annual rotation. Data in transit is protected with TLS 1.2 minimum (TLS 1.3 preferred) and HSTS on all public endpoints. Customer-managed keys (CMK/BYOK) are supported on the Enterprise tier via customer-held Azure Key Vault.",
+    "one_line_note": "CMK correctly stated as supported (not confused with Acme where it was a gap). Evidence matches — Azure Key Vault, annual rotation, TLS 1.2+/HSTS."
+  },
+  {
+    "question_id": "Q4",
+    "verdict": "approved",
+    "final_text": "Yes — SSO via Microsoft Entra ID with MFA enforced for all employees and contractors. FIDO2 security keys are required for administrative accounts.",
+    "one_line_note": "Correctly uses Entra ID (not Google Workspace as raw onboarding claimed). FIDO2 for admins matches STRONG evidence."
+  },
+  {
+    "question_id": "Q5",
+    "verdict": "revised",
+    "final_text": "Access reviews are conducted quarterly, with privileged roles reviewed monthly. On termination, access is revoked within 8 business hours via Microsoft Entra lifecycle workflows.",
+    "one_line_note": "REVISED: Removed 'Access follows RBAC with least-privilege principles' — this claim is not supported by the cited evidence, which only covers review cadence and offboarding timeline. Stripped to what the evidence supports."
+  },
+  {
+    "question_id": "Q6",
+    "verdict": "approved",
+    "final_text": "Penetration testing is performed annually. The most recent test was conducted in January 2026 by Kestrel Security. No critical findings were identified; one high-severity finding (SSRF in webhook handler) was remediated within 21 days and confirmed via retest.",
+    "one_line_note": "All claims match STRONG evidence — Kestrel Security (not CyberGuard as raw onboarding claimed), SSRF finding, 21-day remediation, retest confirmed."
+  },
+  {
+    "question_id": "Q7",
+    "verdict": "revised",
+    "final_text": "Log retention is set at 13 months. Application and platform logs are sent to Azure Monitor with Microsoft Sentinel SIEM and analytics rules. Whether retention can be extended beyond 13 months per customer request is not documented — NEEDS OWNER INPUT: confirm whether extended retention is supported and the mechanism for enabling it.",
+    "one_line_note": "REVISED: Confidence downgraded from 🟢 to 🟡. The 13-month retention claim is 🟢-worthy, but the extension sub-question is a 🔴 gap. 🟢 on the whole answer would mislead. 🟡 honestly signals mixed confidence. Same standard applied as Acme Q7 (lead-approved)."
+  },
+  {
+    "question_id": "Q8",
+    "verdict": "approved",
+    "final_text": "Yes, a documented incident response plan v3.1 is maintained with a severity matrix and 24/7 on-call rotation. Affected customers are notified within 72 hours of a confirmed breach involving their data.",
+    "one_line_note": "IR plan v3.1 and 72-hour notification match STRONG evidence. Note: raw onboarding says 24h/48h SEV-based notification but corpus evidence says 72h. Drafter correctly used the corpus evidence."
+  },
+  {
+    "question_id": "Q9",
+    "verdict": "approved",
+    "final_text": "Backups use continuous geo-redundant replication plus nightly encrypted backups. Target RTO is 12 hours and target RPO is 1 hour. The most recent disaster recovery failover test was conducted on March 19, 2026 and passed — production was restored in Central US in 9 hours and 40 minutes. Restore tests are performed quarterly.",
+    "one_line_note": "DR test 2026-03-19, passed 9h40m — correct. Note: raw onboarding says 2026-04-15/3h47m (different) but corpus evidence uses these values. Drafter correctly followed evidence. RTO 12h, RPO 1h confirmed."
+  },
+  {
+    "question_id": "Q10",
+    "verdict": "revised",
+    "final_text": "Background checks are performed on all new hires via Sterling, covering criminal, identity, and employment verification (US).",
+    "one_line_note": "REVISED: Removed claims about 'annual security awareness training and quarterly phishing simulations' and 'NDAs signed by all staff and contractors' — these are NOT supported by the cited evidence for Q10 (which only covers Sterling background checks). The evidence for training/NDAs exists elsewhere in the corpus but was not cited here — removing the unsupported claims prevents overclaiming."
+  },
+  {
+    "question_id": "Q11",
+    "verdict": "approved",
+    "final_text": "Endpoint protections include Microsoft Intune MDM on all devices, full-disk encryption (BitLocker on Windows, FileVault on macOS), and Microsoft Defender for Endpoint (EDR) deployed fleet-wide.",
+    "one_line_note": "All three claims match STRONG evidence. Note: raw onboarding says Google Endpoint Management/CrowdStrike but corpus says Intune/Defender. Drafter correctly used corpus evidence."
+  },
+  {
+    "question_id": "Q12",
+    "verdict": "approved",
+    "final_text": "Subprocessors with access to customer data: Microsoft Azure (hosting), Stripe (billing), Twilio (SMS dispatch notifications), HubSpot (CRM/support), and Google Workspace (email/docs). A Data Processing Agreement with GDPR Standard Contractual Clauses is available on request.",
+    "one_line_note": "Subprocessor list matches STRONG evidence — Azure (not GCP), HubSpot and Twilio present (not SendGrid/Intercom/Datadog as raw onboarding claimed). Correctly uses corpus evidence."
+  },
+  {
+    "question_id": "Q13",
+    "verdict": "revised",
+    "final_text": "A DPA with GDPR Standard Contractual Clauses is available on request. CCPA requests can be submitted to privacy@relayfield.example. A dedicated Data Protection Officer has not been appointed — NEEDS OWNER INPUT: confirm whether a DPO has been appointed or if this responsibility is assigned to another role.",
+    "one_line_note": "REVISED: Confidence downgraded from 🟢 to 🟡. DPA/CCPA claims are 🟢-worthy, but the DPO sub-question is a 🔴 gap (no DPO evidence in corpus). 🟡 honestly signals mixed confidence. Same standard as Acme."
+  },
+  {
+    "question_id": "Q14",
+    "verdict": "approved",
+    "final_text": "NEEDS OWNER INPUT — Cyber liability insurance details (carrier and per-incident coverage amount) are not stored in the Trust Corpus. No draft available.",
+    "one_line_note": "🔴 tag is correct — zero evidence, human-only domain. No substantive draft made. Proper escalation."
+  },
+  {
+    "question_id": "Q15",
+    "verdict": "approved",
+    "final_text": "NEEDS OWNER INPUT — Indemnification terms for breach of systems are not stored in the Trust Corpus (legal/contractual domain). No draft available.",
+    "one_line_note": "🔴 tag is correct — zero evidence, legal domain. No substantive draft made. Proper escalation."
+  }
+]

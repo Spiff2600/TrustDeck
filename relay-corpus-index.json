@@ -1,0 +1,170 @@
+{
+  "_meta": {
+    "corpus": "DEMO — Relay Field Systems sample data",
+    "tag": "DEMO — Relay sample data",
+    "note": "This index represents Relay Field Systems, Inc., a fictional B2B SaaS company. Must never be cited for real questionnaires.",
+    "indexed_at": "2026-07-05",
+    "source_document": "/home/team/shared/relay-sample-corpus.md",
+    "interview": "TrustDesk Onboarding Interview v2, Tier 1 (Q1-Q20)"
+  },
+  "domains": {
+    "Company": {
+      "has_evidence": true,
+      "summary": "Relay Field Systems, Inc. (Delaware C-corp) — B2B SaaS work-order dispatch & technician scheduling for mid-market trade contractors (HVAC, electrical, plumbing). 85 employees. Hybrid — Denver HQ, ~60% remote. Hosted on Azure (East US 2 primary, Central US DR).",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Company profile", "section": "Company profile", "text": "Relay Field Systems, Inc. (Delaware C-corp) — B2B SaaS work-order dispatch & technician scheduling for mid-market trade contractors (HVAC, electrical, plumbing). 85 employees. Hybrid — Denver HQ, ~60% remote.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Hosting & environments", "section": "Hosting & environments", "text": "Cloud provider: Microsoft Azure — East US 2 primary, Central US for DR. Production, staging, and dev in separate Azure subscriptions with separate VNets.", "strength": "STRONG"}
+      ],
+      "gaps": []
+    },
+    "Compliance": {
+      "has_evidence": true,
+      "summary": "SOC 2 Type II (report 2026-02, covering 2025, one exception — change-management evidence gap, remediated Q3 2025). ISO 27001 not held — targeted for 2027. No HIPAA/PCI DSS. Annual pen testing via Kestrel Security (2026-01, no critical, one high remediated).",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Certifications & assessments", "section": "Certifications & assessments", "text": "SOC 2 Type II: report issued 2026-02, covering 2025-01 through 2025-12. One exception noted (change-management evidence gap), remediated Q3 2025.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Certifications & assessments", "section": "ISO 27001", "text": "ISO 27001: not held — certification targeted for 2027.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Certifications & assessments", "section": "Penetration testing", "text": "Annual. Most recent test 2026-01 by Kestrel Security. No critical findings; one high (SSRF in webhook handler) remediated in 21 days, retest confirmed.", "strength": "STRONG"}
+      ],
+      "gaps": []
+    },
+    "Access Control": {
+      "has_evidence": true,
+      "summary": "SSO via Microsoft Entra ID with MFA enforced. FIDO2 keys required for admins. RBAC least privilege. Quarterly access reviews (monthly for privileged). Offboarding within 8 business hours via Entra lifecycle workflows.",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Access control & identity", "section": "SSO", "text": "Microsoft Entra ID, MFA enforced for all employees and contractors. FIDO2 keys required for admins.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Access control & identity", "section": "Access model", "text": "RBAC, least privilege.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Access control & identity", "section": "Access reviews", "text": "Quarterly; privileged roles reviewed monthly.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Access control & identity", "section": "Offboarding", "text": "Access revocation within 8 business hours via Entra lifecycle workflows.", "strength": "STRONG"}
+      ],
+      "gaps": []
+    },
+    "Encryption": {
+      "has_evidence": true,
+      "summary": "AES-256 at rest (Azure Storage encryption / SQL TDE). Keys in Azure Key Vault, annual automatic rotation. TLS 1.2 minimum, TLS 1.3 preferred. HSTS on public endpoints. CMK/BYOK supported on Enterprise tier via customer-held Azure Key Vault.",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Encryption", "section": "At rest", "text": "AES-256 (Azure Storage encryption / SQL TDE). Keys in Azure Key Vault; annual automatic rotation.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Encryption", "section": "In transit", "text": "TLS 1.2 minimum; TLS 1.3 preferred. HSTS on all public endpoints. No exceptions.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Encryption", "section": "Customer-managed keys", "text": "Supported on Enterprise tier via customer-held Azure Key Vault.", "strength": "STRONG"}
+      ],
+      "gaps": []
+    },
+    "AppSec": {
+      "has_evidence": true,
+      "summary": "Code review required on every PR (2 approvers for production). CI/CD: GitHub Advanced Security — CodeQL SAST, secret scanning, Dependabot SCA. All blocking. Remediation SLAs: Critical 7 days, High 30 days, Medium 90 days.",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Application security", "section": "Code review", "text": "Required on every PR; 2 approvers for production services.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Application security", "section": "CI/CD scanning", "text": "GitHub Advanced Security — CodeQL SAST, secret scanning, Dependabot SCA. All blocking.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Application security", "section": "Remediation SLAs", "text": "Critical 7 days / High 30 days / Medium 90 days.", "strength": "STRONG"}
+      ],
+      "gaps": []
+    },
+    "Logging": {
+      "has_evidence": true,
+      "summary": "Application and platform logs to Azure Monitor. Microsoft Sentinel SIEM with analytics rules. Retention: 13 months. Extended retention per customer request NOT documented — gap.",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Logging & monitoring", "section": "Logging & monitoring", "text": "Application and platform logs to Azure Monitor. Microsoft Sentinel SIEM with analytics rules for auth anomalies and privilege escalation.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Logging & monitoring", "section": "Retention", "text": "Retention: 13 months. Extended retention per customer request is NOT documented — gap.", "strength": "STRONG"}
+      ],
+      "gaps": [
+        {"question": "Can log retention be extended beyond 13 months on customer request?", "detail": "Not documented. Identified gap during onboarding."}
+      ]
+    },
+    "Incident Response": {
+      "has_evidence": true,
+      "summary": "Documented IR plan v3.1 with severity matrix and 24/7 on-call. Customer notification within 72 hours of a confirmed breach involving their data.",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Incident response", "section": "Incident response", "text": "Documented IR plan v3.1 with severity matrix and 24/7 on-call.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Incident response", "section": "Customer notification", "text": "Customer notification within 72 hours of a confirmed breach involving their data.", "strength": "STRONG"}
+      ],
+      "gaps": []
+    },
+    "BC/DR": {
+      "has_evidence": true,
+      "summary": "Continuous geo-redundant replication plus nightly encrypted backups. RTO 12 hours, RPO 1 hour. Last DR failover test 2026-03-19: passed, restored in 9h40m. Quarterly restore tests.",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Business continuity & disaster recovery", "section": "BC/DR", "text": "Continuous geo-redundant replication plus nightly encrypted backups. Targets: RTO 12 hours / RPO 1 hour.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Business continuity & disaster recovery", "section": "DR test", "text": "Last DR failover test 2026-03-19: passed, production restored in Central US in 9h40m. Restore tests run quarterly.", "strength": "STRONG"}
+      ],
+      "gaps": []
+    },
+    "HR Security": {
+      "has_evidence": true,
+      "summary": "Background checks on all new hires via Sterling — criminal, identity, employment (US). Annual security awareness training. Quarterly phishing simulations. NDAs for all staff and contractors.",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — People security", "section": "Background checks", "text": "Background checks on all new hires via Sterling — criminal, identity, employment (US).", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — People security", "section": "Training", "text": "Annual security awareness training + quarterly phishing simulations.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — People security", "section": "NDAs", "text": "NDAs for all staff and contractors.", "strength": "STRONG"}
+      ],
+      "gaps": []
+    },
+    "Endpoint": {
+      "has_evidence": true,
+      "summary": "Microsoft Intune MDM on all devices. BitLocker/FileVault full-disk encryption. Microsoft Defender for Endpoint EDR fleet-wide.",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Endpoint security", "section": "Endpoint security", "text": "Microsoft Intune MDM on all devices.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Endpoint security", "section": "Endpoint security", "text": "BitLocker/FileVault full-disk encryption.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Endpoint security", "section": "Endpoint security", "text": "Microsoft Defender for Endpoint EDR fleet-wide.", "strength": "STRONG"}
+      ],
+      "gaps": []
+    },
+    "Vendors": {
+      "has_evidence": true,
+      "summary": "Subprocessors: Microsoft Azure (hosting), Stripe (billing), Twilio (SMS dispatch), HubSpot (CRM/support), Google Workspace (email/docs). DPA with GDPR SCCs available. CCPA via privacy@relayfield.example.",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Subprocessors", "section": "Subprocessors", "text": "Microsoft Azure (hosting), Stripe (billing), Twilio (SMS dispatch), HubSpot (CRM/support), Google Workspace (email/docs).", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Subprocessors", "section": "DPA", "text": "DPA with GDPR SCCs available on request. CCPA via privacy@relayfield.example.", "strength": "STRONG"}
+      ],
+      "gaps": []
+    },
+    "Privacy": {
+      "has_evidence": true,
+      "summary": "Data stored: work orders, technician schedules, site addresses/contacts, usage analytics. No PHI, no cardholder data (Stripe). Retention: life of contract + 60 days. Deletion: on request within 30 days. DPA with GDPR SCCs. CCPA via privacy@relayfield.example.",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Data handling", "section": "Data stored", "text": "Work orders, technician schedules, customer site addresses/contacts, usage analytics. No PHI, no cardholder data (payments handled by Stripe), no children's data.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Data handling", "section": "Retention", "text": "Life of contract + 60 days, then purged.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Data handling", "section": "Deletion", "text": "On request within 30 days with written confirmation.", "strength": "STRONG"}
+      ],
+      "gaps": []
+    },
+    "Infrastructure & Network": {
+      "has_evidence": true,
+      "summary": "Azure NSGs default-deny. Azure WAF + DDoS Protection on public endpoints. Production access via Azure Bastion with Entra PIM just-in-time elevation. No standing VPN.",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Network security", "section": "Network security", "text": "Azure NSGs default-deny. Azure WAF + DDoS Protection on public endpoints.", "strength": "STRONG"},
+        {"source": "Relay Field Systems Trust Corpus — Network security", "section": "Production access", "text": "Production access via Azure Bastion with Entra PIM just-in-time elevation. No standing VPN.", "strength": "STRONG"}
+      ],
+      "gaps": []
+    },
+    "Policies": {
+      "has_evidence": true,
+      "summary": "Written policies: InfoSec Policy v4, Acceptable Use v2, Access Control v3, Encryption Standard v2, IR Plan v3.1, BC/DR Runbook v2, Data Retention v1. Gaps: Vendor Management Policy is a DRAFT; no clear desk policy.",
+      "evidence_sources": [
+        {"source": "Relay Field Systems Trust Corpus — Policies", "section": "Policies", "text": "Written policies: InfoSec Policy v4, Acceptable Use v2, Access Control v3, Encryption Standard v2, IR Plan v3.1, BC/DR Runbook v2, Data Retention v1.", "strength": "STRONG"}
+      ],
+      "gaps": [
+        {"question": "Vendor Management Policy", "detail": "Exists only as a DRAFT — gap."},
+        {"question": "Clear desk policy", "detail": "No clear desk policy — gap."}
+      ]
+    },
+    "Legal": {
+      "has_evidence": false,
+      "summary": "No evidence in the corpus for legal topics (cyber liability insurance, indemnification terms). These are human-only domains.",
+      "evidence_sources": [],
+      "gaps": [
+        {"question": "Cyber liability insurance carrier and per-incident coverage amount", "detail": "No evidence in corpus. Requires human input."},
+        {"question": "Indemnification terms for breach of systems", "detail": "No evidence in corpus. Requires human input."}
+      ]
+    }
+  },
+  "summary": {
+    "domains_with_evidence": ["Company", "Compliance", "Access Control", "Encryption", "AppSec", "Logging", "Incident Response", "BC/DR", "HR Security", "Endpoint", "Vendors", "Privacy", "Infrastructure & Network", "Policies"],
+    "domains_without_evidence": ["Legal"],
+    "total_gaps_found": 3,
+    "gap_details": [
+      "Logging: Extended log retention beyond 13 months NOT documented",
+      "Policies: Vendor Management Policy is a DRAFT",
+      "Policies: No clear desk policy"
+    ],
+    "notes": "Relay Field Systems — Azure-based B2B SaaS company. More mature than Acme in some areas (CMK support, DR test, AppSec pipeline) but with identifiable gaps (Vendor Mgmt Policy draft, no clear desk policy, no extended retention)."
+  }
+}
