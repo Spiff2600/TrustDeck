@@ -26,11 +26,14 @@ New gaps logged — answer once, reuse forever:
 12. Governance (2) — policy exception process
 13. Logging (2) — extended retention, log integrity monitoring
 14. Incident Response (4) — IR team structure, detection, bug bounty, post-mortems
-15. Data Privacy (6) — data classification, flow diagrams, DLP, regulated data
+15. Data Privacy (6) — data classification, flow diagrams, DLP, export process, regulated data
 16. Encryption (1) — CMK support
 
 (Review-time estimate: 1 min per 🟡, 4 min per 🔴)
 
-**Note:** This benchmark uses the Acme sample corpus, which is intentionally minimal
-(12 domains with evidence). A completed Tier 1+2 onboarding interview (44 questions)
-would cover most of these gaps, significantly increasing the auto-answer rate.
+**Note:** This is the **cold-start** run — the Acme sample corpus is intentionally
+minimal. The full filled-in run is in
+[caiq-lite-benchmark-completed.csv](caiq-lite-benchmark-completed.csv).
+For the same 124 questions after the Tier 1+2 onboarding interview, see
+[caiq-lite-benchmark-onboarded-memo.md](caiq-lite-benchmark-onboarded-memo.md):
+**118/124 🟢 (95%)**, review time ~12 min.

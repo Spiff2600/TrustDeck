@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" role="img" aria-label="TrustDesk demo results: CAIQ-Lite coverage 45 percent cold rising to 95 percent after onboarding; demo review time falling from 12 to 2 minutes">
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1b2a"/>
+      <stop offset="1" stop-color="#16283f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="880" height="430" rx="16" fill="url(#card)"/>
+  <text x="36" y="52" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="24"
+        font-weight="700" fill="#f5f7fa">📋 CAIQ-Lite benchmark — 124 questions, same product, two corpora</text>
+  <text x="36" y="78" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14"
+        fill="#7f93a8">DEMO — Acme sample data · reproducible from the files in this repo</text>
+
+  <!-- cold bar -->
+  <text x="36" y="126" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#c9d6e3">Cold corpus (12 docs)</text>
+  <rect x="36" y="138" width="808" height="34" rx="8" fill="#24374f"/>
+  <rect x="36" y="138" width="364" height="34" rx="8" fill="#3ddc84"/>
+  <text x="52" y="161" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d1b2a">56 🟢 evidenced (45%)</text>
+  <text x="700" y="161" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#9fb3c8">68 gaps logged</text>
+
+  <!-- onboarded bar -->
+  <text x="36" y="216" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#c9d6e3">After the 45-minute Tier 1+2 onboarding interview</text>
+  <rect x="36" y="228" width="808" height="34" rx="8" fill="#24374f"/>
+  <rect x="36" y="228" width="769" height="34" rx="8" fill="#3ddc84"/>
+  <rect x="805" y="228" width="26" height="34" fill="#f2c94c"/>
+  <rect x="831" y="228" width="13" height="34" rx="0" fill="#eb5757"/>
+  <text x="52" y="251" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d1b2a">118 🟢 evidenced (95%)</text>
+  <text x="700" y="286" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#9fb3c8">+ 4 🟡 confirms · 2 🔴</text>
+
+  <line x1="36" y1="296" x2="844" y2="296" stroke="#24374f" stroke-width="1"/>
+
+  <!-- flywheel row -->
+  <text x="36" y="330" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20"
+        font-weight="700" fill="#f5f7fa">The flywheel, measured (15-question demo)</text>
+  <g font-family="Consolas, Menlo, monospace" font-size="16">
+    <text x="36" y="366" fill="#c9d6e3">Run 1 (cold corpus) ......... 9 🟢 · review ~12 min</text>
+    <text x="36" y="394" fill="#c9d6e3">Run 2 (6 gaps answered once)  13 🟢 · review ~2 min · 0 new gaps</text>
+  </g>
+  <text x="36" y="420" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13"
+        fill="#7f93a8">Every answered gap joins the Answer Library — questionnaire #5 is a coffee break.</text>
+</svg>

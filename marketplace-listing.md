@@ -24,12 +24,15 @@ TrustDesk is a five-agent team that answers vendor security questionnaires — S
 Every answer is confidence-tagged:
 🟢 evidenced → send it · 🟡 inferred → 1-min confirm · 🔴 no basis → routed to you, never guessed.
 
-**🚀 Results** (benchmark: CAIQ-Lite, 124 questions, Acme sample corpus — reproducible in demo mode):
-• 124 questions → 45% auto-answered with citations (56/124)
-• 68 gaps surfaced and logged — answer once, reuse forever
-• Zero fabrications — no overclaims, no invented controls
+**🚀 Results** (benchmark: CAIQ-Lite, 124 questions — every number reproducible from the public repo, checked in CI):
+• Cold start, minimal corpus → 56/124 auto-answered with citations (45%)
+• After the 45-minute onboarding interview → **118/124 (95%)**, review time ~12 min vs ~8 hours manual
+• Flywheel, measured: demo run 1 = 9/15 🟢, ~12 min review; owner answers 6 gaps once; run 2 = 13/15 🟢, ~2 min review, 0 new gaps
+• Zero fabrications in every run — no overclaims, no invented controls
 
 **The flywheel:** every run grows your Answer Library. Questionnaire #2 covers more than #1. By #5, vendor review is a coffee break.
+
+**The math:** a single 200-question review costs 10–15 hours. At any billing rate, TrustDesk pays for itself the first run — everything after that is found time.
 
 For B2B SaaS founders, sales engineers, and fractional CISOs. Built by a cloud security architect with 15+ years in federal and enterprise environments (Zero Trust, FedRAMP, identity) — it answers the way auditors expect, because it was designed by someone who's sat on both sides of the table.
 
@@ -52,8 +55,17 @@ A: The Librarian runs a conversational 20-minute interview covering your company
 **Q: Can TrustDesk fabricate a "yes" I don't have?**
 A: No — that's the entire design. The Auditor is a hostile reviewer who checks every answer against your actual evidence. Answers with no evidence get tagged 🔴 and routed to you. A fabricated answer is a contract breach waiting to happen, and TrustDesk won't do it.
 
+**Q: What do I need to run it?**
+A: A Claude account that supports agent teams — nothing else. Demo mode works out of the box with the included Acme sample files; your first real run just needs the 20-minute onboarding interview.
+
 **Q: What formats are supported?**
-A: Excel (xlsx/xls), CSV, PDF text, and pasted portal questions. Legal & Insurance questions are always routed to you.
+A: Excel (xlsx/xls), CSV, PDF text, and pasted portal questions. You get your original file back with the answers filled in — not a reformatted substitute. Legal & Insurance questions are always routed to you.
+
+**Q: Does it handle SIG?**
+A: Yes — TrustDesk fills in the SIG file your customer sends you. (SIG content is licensed by Shared Assessments, so the included demo uses CAIQ-based samples instead.)
+
+**Q: Where's the proof?**
+A: The public repo contains the complete worked example: input questionnaire, the corpus it answered from, every answer with its citation, the Auditor's per-question verdicts — including the four answers it downgraded — and both benchmark runs. The repo's CI fails if any published number stops reconciling with the artifacts.
 
 **Q: Is my data secure?**
 A: Your Trust Corpus stays in your environment. Only upload policies and executive summaries — never credentials, keys, or secrets.

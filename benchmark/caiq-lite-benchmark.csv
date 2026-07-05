@@ -2,7 +2,7 @@ QuestionID,Category,Domain,Question
 CAIQ-001,Compliance,A&A,Do you have a security role or function assigned within your organization?
 CAIQ-002,Compliance,A&A,Do you maintain a written information security program?
 CAIQ-003,Compliance,A&A,How often is your security program reviewed and updated?
-CAIQ-004,Compliance,A&A,Do you hold any third-party security certifications (SOC 2, ISO 27001, etc.)?
+CAIQ-004,Compliance,A&A,"Do you hold any third-party security certifications (SOC 2, ISO 27001, etc.)?"
 CAIQ-005,Compliance,A&A,When was your most recent external audit? Were any exceptions noted?
 CAIQ-006,Compliance,A&A,Do you conduct internal audits between external assessments?
 CAIQ-007,Compliance,A&A,How are audit findings tracked to closure?
@@ -19,7 +19,7 @@ CAIQ-017,Application Security,AIS,Do you produce or consume SBOMs?
 CAIQ-018,Application Security,AIS,How are APIs authenticated and authorized?
 CAIQ-019,Application Security,AIS,Is rate limiting applied to public APIs?
 CAIQ-020,Application Security,AIS,Are development and production environments separated?
-CAIQ-021,Application Security,AIS,Is production data ever used in non-production environments? If so, is it masked?
+CAIQ-021,Application Security,AIS,"Is production data ever used in non-production environments? If so, is it masked?"
 CAIQ-022,Application Security,AIS,Do you have remediation SLAs for security findings by severity?
 CAIQ-023,BC/DR,BCR,How often are backups performed?
 CAIQ-024,BC/DR,BCR,Are backups encrypted?
@@ -49,7 +49,7 @@ CAIQ-047,Data Center,DCS,Do you operate any physical data centers?
 CAIQ-048,Data Center,DCS,How do you verify your cloud provider's physical security controls?
 CAIQ-049,Data Center,DCS,How often are provider attestations reviewed?
 CAIQ-050,Data Privacy,DSP,What categories of customer data do you store or process?
-CAIQ-051,Data Privacy,DSP,Do you process any regulated data (PHI, cardholder data)?
+CAIQ-051,Data Privacy,DSP,"Do you process any regulated data (PHI, cardholder data)?"
 CAIQ-052,Data Privacy,DSP,How long is customer data retained?
 CAIQ-053,Data Privacy,DSP,What is your data deletion process after contract termination?
 CAIQ-054,Data Privacy,DSP,What is your data export process for customers?
@@ -91,8 +91,8 @@ CAIQ-089,Portability,IPY,How long after termination is data available for export
 CAIQ-090,Infrastructure,IVS,How are production and non-production environments isolated?
 CAIQ-091,Infrastructure,IVS,Are network segmentation and security groups used?
 CAIQ-092,Infrastructure,IVS,Are default-deny firewall rules enforced?
-CAIQ-093,Infrastructure,IVS,What protects public endpoints (WAF, DDoS mitigation)?
-CAIQ-094,Infrastructure,IVS,How do employees access production (VPN, zero-trust, bastion)?
+CAIQ-093,Infrastructure,IVS,"What protects public endpoints (WAF, DDoS mitigation)?"
+CAIQ-094,Infrastructure,IVS,"How do employees access production (VPN, zero-trust, bastion)?"
 CAIQ-095,Infrastructure,IVS,Are vulnerability scans run against infrastructure?
 CAIQ-096,Infrastructure,IVS,How often are vulnerability scans run?
 CAIQ-097,Infrastructure,IVS,How are OS and dependency patches applied?

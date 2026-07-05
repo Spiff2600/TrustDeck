@@ -1,8 +1,16 @@
-# Acme Sample Trust Corpus
+# Acme Sample Trust Corpus (v1.1)
 
 > **DEMO DATA — entirely fictional.** For demo mode only. The Librarian must
 > never cite this corpus when answering a real questionnaire, and all outputs
 > generated from it are watermarked "DEMO — Acme sample data."
+
+## Information Security Program Charter v1.0
+
+- The CTO is the named owner of the information security program.
+- The program comprises this charter and the supporting policies listed in
+  this corpus (encryption, access control, logging & monitoring, incident
+  response, BC/DR, endpoint, acceptable use).
+- The program and all policies are reviewed annually.
 
 ## Company profile
 
@@ -54,6 +62,23 @@ run in separate AWS accounts.
 - Daily encrypted backups with cross-region replication to us-west-2.
 - Targets: RTO 8 hours, RPO 24 hours.
 
+## Network Architecture Summary v1.0
+
+- Environments are segmented with per-environment VPCs and AWS security
+  groups.
+- AWS Inspector vulnerability scanning is enabled on production accounts.
+
+## Data Lifecycle Summary v1.0
+
+- Customer data is retained for the duration of the contract plus 90 days.
+- Customer data is deleted within 30 days after the end of the
+  post-termination retention window.
+
+## Acceptable Use Policy v1.2
+
+- Signed by all staff at onboarding; covers permitted device use and
+  prohibited activities.
+
 ## HR Security (Employee Handbook §7)
 
 - Background checks performed on all new hires.
@@ -71,7 +96,7 @@ run in separate AWS accounts.
 AWS (hosting) · Datadog (logging/monitoring) · Stripe (billing) ·
 Google Workspace (email/docs) · Zendesk (support)
 
-## Privacy
+## Privacy Summary
 
 - DPA available on request; GDPR Standard Contractual Clauses incorporated.
 - CCPA requests honored via privacy@acme.example.
