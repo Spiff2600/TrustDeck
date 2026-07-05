@@ -1,13 +1,12 @@
 📋 TRUSTDESK COVERAGE MEMO
-> **DEMO — Relay sample data.** Generated from the 15-question demo against the Relay Field Systems Trust Corpus.
-File: Demo Questionnaire (15 questions) — Run: 6 min
+> **DEMO — Relay sample data.** 15-question demo against the Relay Field Systems Trust Corpus.
+File: relay-demo-questionnaire — 15 questions · Run: 8 min
 
-🟢 Auto-answered, fully evidenced ........ 8 (53%)
-🟡 Drafted, needs your confirmation ....... 5 (33%)
+🟢 Auto-answered, fully evidenced ........ 9 (60%)
+🟡 Drafted, needs your confirmation ....... 4 (27%)
      → Q3: CMK limited to Enterprise tier
      → Q7: Extended log retention not documented
-     → Q9: DR test date passed — confirmed but set conservative
-     → Q10: Background check scope documented — set conservative
+     → Q9: DR test date passed — conservative confidence
      → Q13: DPO appointment not addressed
 🔴 Needs your input ....................... 2 (13%)
      → 2 legal/insurance (routed human-only)
@@ -20,7 +19,8 @@ New gaps logged — answer once, reuse forever:
 3. Q14 — Cyber liability insurance details (legal, human-only)
 4. Q15 — Indemnification terms (legal, human-only)
 
-(Review-time estimate: 1 min per 🟡, 4 min per 🔴)
+Auditor corrections applied: Q5 overclaim removed (RBAC claim not in evidence),
+Q10 overclaim removed (training/phishing/NDA claims not in cited evidence).
 
 Key differences from Acme demo:
 ✅ CMK/BYOK supported (Acme: not documented)
@@ -28,4 +28,4 @@ Key differences from Acme demo:
 ✅ Background checks via Sterling (Acme: vendor not named)
 ✅ AppSec pipeline: CodeQL SAST, secret scanning, Dependabot (Acme: pen testing only)
 ✅ SOC 2 Type II with one exception, remediated (Acme: clean report)
-🆕 Vendor Management Policy is a DRAFT, no clear desk policy (new gaps)
+🆕 Vendor Management Policy is a DRAFT, no clear desk policy (new gaps from interview)
