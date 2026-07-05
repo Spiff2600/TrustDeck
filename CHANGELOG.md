@@ -1,9 +1,9 @@
-# TrustDesk Changelog
+# TrustDeck Changelog
 
 ## v1.0.0 (2026-07-05) — Initial Release
 
 **What's new:**
-- First public release of TrustDesk on the cto.new Marketplace
+- First public release of TrustDeck on the cto.new Marketplace
 - 5-agent team: Lead, Librarian, Drafter, Auditor, Assembler
 - Demo mode with Acme sample corpus for instant try-before-you-buy
 - Full pipeline runs in ~8 min (15 questions) to ~12 min (CAIQ-Lite, 124 questions)
