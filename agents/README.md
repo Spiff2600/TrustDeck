@@ -1,8 +1,11 @@
 # TrustDeck Agents
 
-The five agent definitions that make up the TrustDeck team, in pipeline
-order. Each file is the agent's role spec: mission, inputs/outputs, and the
-non-negotiable rules it enforces.
+The five agents that make up the TrustDeck team, in pipeline order. What's
+published here is each agent's **public contract** — its mission and the
+non-negotiable rules it's held to. The full role specs (the prompts that
+implement these contracts) ship with the product on the marketplace; the
+demo artifacts in [demo/](../demo/) show the contracts being honored in
+practice.
 
 ```mermaid
 flowchart LR

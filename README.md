@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/Spiff2600/TrustDeck/actions/workflows/consistency.yml"><img src="https://github.com/Spiff2600/TrustDeck/actions/workflows/consistency.yml/badge.svg" alt="consistency checks"/></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license"/></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20%2B%20proprietary-blue.svg" alt="scoped license: MIT for demo and tooling, proprietary for product content"/></a>
   <img src="https://img.shields.io/badge/CAIQ--Lite-124%20questions-1f3864.svg" alt="CAIQ-Lite: 124 questions"/>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-3ddc84.svg" alt="PRs welcome"/></a>
 </p>
@@ -101,10 +101,10 @@ Tier 1+2 (~45 min total) covers all 17 CCM v4 domains — full CAIQ class.
 
 | Path | Contents |
 |---|---|
-| [agents/](agents/) | The five agent role specs and the pipeline's shared rules |
+| [agents/](agents/) | The five agents' public contracts and the pipeline's shared rules (full role specs ship with the product) |
 | [demo/](demo/) | The complete worked example: corpus, questionnaire (csv+xlsx), answers, auditor verdicts, coverage memos, gap register, answer library |
 | [benchmark/](benchmark/) | CAIQ-Lite (124 questions), the filled-in cold run, and the cold vs onboarded memos |
-| [trustdeck-onboarding-interview.md](trustdeck-onboarding-interview.md) | The 46-question interview that builds your Trust Corpus, mapped to CCM v4 / SOC 2 / ISO 27001 / NIST CSF |
+| [trustdeck-onboarding-interview.md](trustdeck-onboarding-interview.md) | Tier 1 of the onboarding interview, published in full (Tiers 2–3 and the CCM v4 / SOC 2 / ISO 27001 / NIST CSF coverage map ship with the product) |
 | [marketplace-listing.md](marketplace-listing.md) | Listing copy and FAQ |
 | [scripts/](scripts/) | `check_consistency.py` — the CI-enforced cross-artifact number checks |
 | [SECURITY.md](SECURITY.md) | Data handling: what to upload, what never to, and how demo data is isolated |
@@ -132,7 +132,10 @@ shape the product:
   never cited on a real run.
 - Legal and insurance questions are always routed to a human.
 - Contributions: see [CONTRIBUTING.md](CONTRIBUTING.md) and
-  [WORKFLOW.md](WORKFLOW.md). License: [MIT](LICENSE).
+  [WORKFLOW.md](WORKFLOW.md). License: [scoped](LICENSE) — the demo data,
+  benchmarks, and tooling are MIT so you can audit and reproduce everything;
+  the product content (agent contracts, interview) is source-visible but all
+  rights reserved.
 
 ---
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>html,body{margin:0;padding:0;width:1280px;height:640px;overflow:hidden}</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1b2a"/>
+      <stop offset="1" stop-color="#1b2a41"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3ddc84"/>
+      <stop offset="1" stop-color="#1fa864"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- shield -->
+  <g transform="translate(96,150) scale(1.55)">
+    <path d="M62 0 L124 22 L124 66 C124 104 96 128 62 140 C28 128 0 104 0 66 L0 22 Z"
+          fill="url(#shield)" opacity="0.95"/>
+    <path d="M34 68 L54 88 L92 46" fill="none" stroke="#0d1b2a" stroke-width="12"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- wordmark + tagline -->
+  <text x="340" y="238" font-family="Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="96" font-weight="700" fill="#f5f7fa">TrustDeck</text>
+  <text x="344" y="298" font-family="Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="30" fill="#9fb3c8">Security questionnaires, answered from your evidence.</text>
+  <text x="344" y="342" font-family="Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="30" fill="#9fb3c8">Never guessed. Audited for overclaims.</text>
+
+  <!-- stat strip -->
+  <g transform="translate(96,420)">
+    <rect x="0" y="0" width="1088" height="130" rx="18" fill="#0a1420"/>
+    <text x="48" y="55" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" fill="#7f93a8">CAIQ-Lite · 124 questions</text>
+    <text x="48" y="98" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#f5f7fa">45% cold&#160;&#160;&#8594;&#160;&#160;<tspan fill="#3ddc84">95% onboarded</tspan></text>
+    <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="24">
+      <circle cx="700" cy="47" r="9" fill="#3ddc84"/>
+      <text x="718" y="55" fill="#c9d6e3">evidenced</text>
+      <circle cx="862" cy="47" r="9" fill="#f2c94c"/>
+      <text x="880" y="55" fill="#c9d6e3">1-min confirm</text>
+      <circle cx="700" cy="92" r="9" fill="#eb5757"/>
+      <text x="718" y="100" fill="#c9d6e3">routed to you — never fabricated</text>
+    </g>
+  </g>
+</svg>
+</body>
+</html>

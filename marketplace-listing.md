@@ -56,7 +56,7 @@ A: The Librarian runs a conversational 20-minute interview covering your company
 A: No — that's the entire design. The Auditor is a hostile reviewer who checks every answer against your actual evidence. Answers with no evidence get tagged 🔴 and routed to you. A fabricated answer is a contract breach waiting to happen, and TrustDeck won't do it.
 
 **Q: What do I need to run it?**
-A: A Claude account that supports agent teams — nothing else. Demo mode works out of the box with the included Acme sample files; your first real run just needs the 20-minute onboarding interview.
+A: Nothing beyond the marketplace — TrustDeck installs as a ready-made team on cto.new. Demo mode works out of the box with the included Acme sample files; your first real run just needs the 20-minute onboarding interview.
 
 **Q: What formats are supported?**
 A: Excel (xlsx/xls), CSV, PDF text, and pasted portal questions. You get your original file back with the answers filled in — not a reformatted substitute. Legal & Insurance questions are always routed to you.
