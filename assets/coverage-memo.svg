@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" role="img" aria-label="TrustDeck Coverage Memo for the 15-question demo: 9 evidenced, 4 to confirm, 2 routed, about 12 minutes of review versus 60 manual">
+  <defs>
+    <linearGradient id="memoBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1b2a"/>
+      <stop offset="1" stop-color="#16283f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="880" height="460" rx="16" fill="url(#memoBg)"/>
+
+  <!-- terminal chrome -->
+  <rect x="0" y="0" width="880" height="46" rx="16" fill="#0a1420"/>
+  <rect x="0" y="30" width="880" height="16" fill="#0a1420"/>
+  <circle cx="30" cy="23" r="7" fill="#eb5757"/>
+  <circle cx="54" cy="23" r="7" fill="#f2c94c"/>
+  <circle cx="78" cy="23" r="7" fill="#3ddc84"/>
+  <text x="440" y="28" text-anchor="middle" font-family="Consolas, Menlo, monospace"
+        font-size="14" fill="#7f93a8">the 60-second read you get back with every run</text>
+
+  <g font-family="Consolas, Menlo, monospace" font-size="17">
+    <text x="36" y="86" fill="#f5f7fa" font-weight="bold">📋 TRUSTDECK COVERAGE MEMO</text>
+    <text x="36" y="112" fill="#7f93a8">File: acme-demo-questionnaire.csv — 15 questions · Run: 8 min</text>
+
+    <text x="36" y="156" fill="#3ddc84">🟢 Auto-answered, fully evidenced ........  9 (60%)</text>
+    <text x="36" y="186" fill="#f2c94c">🟡 Drafted, needs your confirmation ......  4 (27%)</text>
+    <text x="76" y="210" fill="#9fb3c8" font-size="14">→ 4 evidenced answers, each with one unevidenced sub-question</text>
+    <text x="36" y="240" fill="#eb5757">🔴 Needs your input ......................  2 (13%)</text>
+    <text x="76" y="264" fill="#9fb3c8" font-size="14">→ 2 legal/insurance (routed human-only)</text>
+
+    <text x="36" y="308" fill="#f5f7fa">Your review time: <tspan fill="#3ddc84" font-weight="bold">~12 min</tspan>   (manual baseline: ~60 min)</text>
+
+    <text x="36" y="352" fill="#7f93a8">New gaps logged — answer once, reuse forever: 6</text>
+    <text x="36" y="378" fill="#7f93a8">Every answer cited to its source policy · audited for overclaims</text>
+  </g>
+
+  <line x1="36" y1="402" x2="844" y2="402" stroke="#24374f" stroke-width="1"/>
+  <text x="36" y="432" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#7f93a8">Run 2, after answering those 6 gaps once: <tspan fill="#3ddc84" font-weight="bold">13 🟢 · ~2 min review · 0 new gaps</tspan></text>
+</svg>

@@ -21,7 +21,7 @@
   <text x="216" y="92" font-family="Segoe UI, Helvetica, Arial, sans-serif"
         font-size="52" font-weight="700" fill="#f5f7fa">TrustDeck</text>
   <text x="218" y="128" font-family="Segoe UI, Helvetica, Arial, sans-serif"
-        font-size="19" fill="#9fb3c8">Security questionnaires, answered from your evidence — never guessed.</text>
+        font-size="18" fill="#9fb3c8">Security questionnaires, answered from your evidence — never guessed.</text>
   <!-- confidence legend -->
   <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15">
     <circle cx="226" cy="160" r="7" fill="#3ddc84"/>

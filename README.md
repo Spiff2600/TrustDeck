@@ -69,6 +69,10 @@ guessed.
 
 ## Try the demo (10 minutes, no setup)
 
+<p align="center">
+  <img src="assets/coverage-memo.svg" alt="The Coverage Memo from the 15-question demo run: 9 evidenced, 4 needing a quick confirm, 2 routed as legal — about 12 minutes of review instead of 60" width="880"/>
+</p>
+
 The repo ships a complete worked example against a fictional company:
 
 1. **Read the input:** [demo/acme-demo-questionnaire.csv](demo/acme-demo-questionnaire.csv)
