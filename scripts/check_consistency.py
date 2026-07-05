@@ -151,6 +151,44 @@ for qid in re.findall(r"CAIQ-\d+", memo_on):
     check(f"onboarded open item {qid} is documented in tier2 additions",
           qid in additions)
 
+print("== relay demo (second worked example) ==")
+relay = read_csv("relay-demo-completed.csv")
+rverdict = json.loads(read("relay-auditor-verdict.json"))
+check("relay CSV has 15 rows", len(relay) == 15, f"got {len(relay)}")
+rvmap = {v["question_id"]: v for v in rverdict}
+rmism = [r["Question ID"] for r in relay
+         if rvmap[r["Question ID"]]["final_text"] != r["Vendor Response"]]
+check("relay verdict final_text == CSV Vendor Response for every question",
+      not rmism, f"mismatch: {rmism}")
+rg = [r for r in relay if r["Reviewer Notes"].startswith("\U0001F7E2")]
+ry = [r for r in relay if r["Reviewer Notes"].startswith("\U0001F7E1")]
+rr = [r for r in relay if r["Reviewer Notes"].startswith("\U0001F534")]
+rmemo = read("relay-coverage-memo.md")
+rt = memo_tallies(rmemo)
+check("relay memo tallies match CSV tags",
+      [c for c, _ in rt[:3]] == [len(rg), len(ry), len(rr)],
+      f"memo says {rt}, CSV {len(rg)}/{len(ry)}/{len(rr)}")
+check("relay memo counts sum to 15", sum(c for c, _ in rt[:3]) == 15)
+check("relay memo percentages sum to 100", sum(p for _, p in rt[:3]) == 100)
+rrt = len(ry) * 1 + len(rr) * 4
+check(f"relay memo review time = {rrt} min", f"~{rrt} min" in rmemo)
+check("every evidenced relay row cites the interview",
+      all("Onboarding Interview" in r["Reviewer Notes"] for r in rg + ry))
+
+# The Relay corpus was corrected mid-run from a simulated draft (GCP/Austin)
+# to owner-confirmed facts (Azure/Denver). No artifact may regress.
+# relay-auditor-verdict.json is exempt: its audit notes legitimately name
+# the rejected simulated values ("Kestrel Security, not CyberGuard").
+STALE = ("Austin", "London", "GCP", "86 employees", "Google Cloud",
+         "CyberGuard", "Checkr (USA)", "Istio")
+for f in ("relay-onboarding-results.md", "relay-corpus.json",
+          "relay-corpus-index.json", "relay-evidence.json",
+          "relay-drafted-answers.json", "relay-sample-corpus.md",
+          "relay-demo-completed.csv", "relay-coverage-memo.md"):
+    s = read(f)
+    hits = [w for w in STALE if w in s]
+    check(f"{f} carries no stale simulated facts", not hits, f"found {hits}")
+
 print()
 if FAILURES:
     print(f"{len(FAILURES)} consistency check(s) FAILED")
