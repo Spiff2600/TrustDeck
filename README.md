@@ -40,8 +40,16 @@ auditors trust vendors who know what they don't have.
 
 The Relay run is special: it was produced end-to-end by the deployed
 product — a live onboarding interview followed by the full pipeline,
-including two overclaims the Auditor caught and removed
-([relay-auditor-verdict.json](relay-auditor-verdict.json), Q5 and Q10).
+including two overclaims the Auditor caught and removed:
+
+<p align="center">
+  <img src="assets/auditor-says-no.svg" alt="Two real Auditor verdicts from the live Relay run: a plausible RBAC claim and a training/NDA claim, both deleted because the cited evidence didn't support them" width="880"/>
+</p>
+
+Every tool in this category publishes an accuracy number, and every one of
+them is self-graded. These verdicts are artifacts in the repo
+([relay-auditor-verdict.json](relay-auditor-verdict.json)) — you don't take
+the claim on faith, you re-run the numbers.
 
 All benchmark data is fictional demo data (Acme and Relay), watermarked
 and reproducible from the files in this repo — and

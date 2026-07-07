@@ -34,6 +34,8 @@ Every answer is confidence-tagged:
 
 **The math:** a single 200-question review costs 10–15 hours. At any billing rate, TrustDeck pays for itself the first run — everything after that is found time.
 
+**The anchors:** enterprise questionnaire tools run $9,600–$23,000 per year. A freelancer charges $40–$200 to fill one questionnaire, once. TrustDeck is $29, one time — less than a single gig — and it's yours.
+
 For B2B SaaS founders, sales engineers, and fractional CISOs. Built by a cloud security architect with 15+ years in federal and enterprise environments (Zero Trust, FedRAMP, identity) — it answers the way auditors expect, because it was designed by someone who's sat on both sides of the table.
 
 ⚠️ TrustDeck drafts; you approve. It will never fabricate a control you don't have. That's the point.
@@ -53,7 +55,7 @@ A: TrustDeck comes with the Acme sample corpus — a realistic startup security 
 A: The Librarian runs a conversational 20-minute interview covering your company profile, certifications, policies, and security practices. Upload your existing documents and TrustDeck indexes them as evidence. Tier 2 adds 24 more questions for full CAIQ-class coverage.
 
 **Q: Can TrustDeck fabricate a "yes" I don't have?**
-A: No — that's the entire design. The Auditor is a hostile reviewer who checks every answer against your actual evidence. Answers with no evidence get tagged 🔴 and routed to you. A fabricated answer is a contract breach waiting to happen, and TrustDeck won't do it.
+A: No — that's the entire design. The Auditor is a hostile reviewer who checks every answer against your actual evidence. Answers with no evidence get tagged 🔴 and routed to you. A fabricated answer is a contract breach waiting to happen, and TrustDeck won't do it. This isn't theoretical: courts have held companies liable for what their AI claimed (Air Canada, 2024), and falsely certifying security compliance — no breach required — has cost contractors millions under the False Claims Act. The Auditor exists so that's never you.
 
 **Q: What do I need to run it?**
 A: Nothing beyond the marketplace — TrustDeck installs as a ready-made team on cto.new. Demo mode works out of the box with the included Acme sample files; your first real run just needs the 20-minute onboarding interview.

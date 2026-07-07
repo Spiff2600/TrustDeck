@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" role="img" aria-label="Two real Auditor verdicts from the live Relay run: an RBAC overclaim and a training/NDA overclaim, both deleted because the cited evidence did not support them">
+  <defs>
+    <style>
+      .bg { fill: #101826; }
+      .card { fill: #1a2436; stroke: #2c3a52; stroke-width: 1; }
+      .h1 { font: 700 26px 'Segoe UI', system-ui, -apple-system, sans-serif; fill: #f3f6fb; }
+      .sub { font: 400 14px 'Segoe UI', system-ui, -apple-system, sans-serif; fill: #93a3bc; }
+      .qid { font: 700 13px 'Consolas', 'SFMono-Regular', monospace; fill: #93a3bc; }
+      .cut { font: italic 400 15px 'Segoe UI', system-ui, sans-serif; fill: #e06c75; text-decoration: line-through; }
+      .why { font: 400 13px 'Segoe UI', system-ui, sans-serif; fill: #93a3bc; }
+      .ship { font: 400 14px 'Segoe UI', system-ui, sans-serif; fill: #98c379; }
+      .label-cut { font: 700 11px 'Consolas', monospace; fill: #e06c75; letter-spacing: 1px; }
+      .label-ship { font: 700 11px 'Consolas', monospace; fill: #98c379; letter-spacing: 1px; }
+      .foot { font: 400 13px 'Segoe UI', system-ui, sans-serif; fill: #93a3bc; }
+      .footpath { font: 400 12px 'Consolas', monospace; fill: #5c9ce6; }
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="880" height="440" rx="12"/>
+
+  <text class="h1" x="40" y="52">🕵️ The Auditor said no</text>
+  <text class="sub" x="40" y="78">Live run, deployed product, real verdicts — the Drafter wrote it, the Auditor deleted it.</text>
+
+  <!-- Q5 card -->
+  <rect class="card" x="40" y="100" width="800" height="130" rx="8"/>
+  <text class="qid" x="60" y="126">Q5 — ACCESS CONTROL</text>
+  <text class="label-cut" x="60" y="150">DELETED</text>
+  <text class="cut" x="132" y="150">&#8220;Access follows RBAC with least-privilege principles.&#8221;</text>
+  <text class="why" x="60" y="172">Plausible. Uncited — the evidence covered only review cadence and offboarding. Stripped.</text>
+  <text class="label-ship" x="60" y="200">SHIPPED</text>
+  <text class="ship" x="132" y="200">&#8220;Access reviews quarterly, privileged roles monthly; revocation within 8 business</text>
+  <text class="ship" x="132" y="218">hours via Entra lifecycle workflows.&#8221; — every word evidence-backed</text>
+
+  <!-- Q10 card -->
+  <rect class="card" x="40" y="248" width="800" height="130" rx="8"/>
+  <text class="qid" x="60" y="274">Q10 — PEOPLE &amp; TRAINING</text>
+  <text class="label-cut" x="60" y="298">DELETED</text>
+  <text class="cut" x="132" y="298">&#8220;annual security awareness training &#8230; NDAs signed by all staff and contractors&#8221;</text>
+  <text class="why" x="60" y="320">True elsewhere in the corpus — but not in the evidence cited here. Overclaim removed anyway.</text>
+  <text class="label-ship" x="60" y="348">SHIPPED</text>
+  <text class="ship" x="132" y="348">&#8220;Background checks on all new hires via Sterling (criminal, identity,</text>
+  <text class="ship" x="132" y="366">employment — US).&#8221;</text>
+
+  <text class="foot" x="40" y="412">Verdicts ship as artifacts, checked in CI:</text>
+  <text class="footpath" x="316" y="412">relay-auditor-verdict.json</text>
+  <text class="foot" x="516" y="412">— re-run the numbers yourself.</text>
+</svg>
