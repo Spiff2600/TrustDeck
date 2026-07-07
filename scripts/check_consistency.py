@@ -175,6 +175,27 @@ check(f"relay memo review time = {rrt} min", f"~{rrt} min" in rmemo)
 check("every evidenced relay row cites the interview",
       all("Onboarding Interview" in r["Reviewer Notes"] for r in rg + ry))
 
+rlib = json.loads(read("relay-answer-library.json"))
+check("relay library has 15 entries", len(rlib) == 15, f"got {len(rlib)}")
+rlmap = {e["question_id"]: e for e in rlib}
+TAG_COLOR = {"\U0001F7E2": "green", "\U0001F7E1": "yellow", "\U0001F534": "red"}
+rexpected = {r["Question ID"]: TAG_COLOR.get(r["Reviewer Notes"][:1], "?")
+             for r in relay}
+badconf = [q for q, c in rexpected.items() if rlmap[q]["confidence"] != c]
+check("relay library confidence matches CSV reviewer tag for every question",
+      not badconf, f"mismatch: {badconf}")
+badans = [q for q in rlmap
+          if not rlmap[q]["answer"].strip().startswith(rvmap[q]["final_text"].rstrip())]
+check("relay library answer starts with auditor verdict final_text",
+      not badans, f"mismatch: {badans}")
+check("relay library Q14/Q15 answers equal verdict text exactly (no citation)",
+      all(rlmap[q]["answer"] == rvmap[q]["final_text"] for q in ("Q14", "Q15")))
+check("relay library Q14/Q15 are red and sourced to legal escalation",
+      all(rlmap[q]["confidence"] == "red" and "legal" in rlmap[q]["source"]
+          for q in ("Q14", "Q15")))
+check("every relay library entry carries the demo watermark",
+      all(e["watermark"] == "DEMO — Relay sample data" for e in rlib))
+
 # The Relay corpus was corrected mid-run from a simulated draft (GCP/Austin)
 # to owner-confirmed facts (Azure/Denver). No artifact may regress.
 # relay-auditor-verdict.json is exempt: its audit notes legitimately name
@@ -184,7 +205,8 @@ STALE = ("Austin", "London", "GCP", "86 employees", "Google Cloud",
 for f in ("relay-onboarding-results.md", "relay-corpus.json",
           "relay-corpus-index.json", "relay-evidence.json",
           "relay-drafted-answers.json", "relay-sample-corpus.md",
-          "relay-demo-completed.csv", "relay-coverage-memo.md"):
+          "relay-demo-completed.csv", "relay-coverage-memo.md",
+          "relay-answer-library.json"):
     s = read(f)
     hits = [w for w in STALE if w in s]
     check(f"{f} carries no stale simulated facts", not hits, f"found {hits}")
