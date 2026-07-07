@@ -33,7 +33,7 @@ function Home() {
           href={PAYMENT_LINK}
           className="rounded-lg bg-indigo-600 px-6 py-3 text-base font-semibold text-white shadow hover:bg-indigo-500"
         >
-          Buy now — $29 launch price — doubles to $58 after the first cohort
+          Buy now — $29 for the first 25 buyers · then $58 · $79 final
         </a>
         <a
           href={`mailto:${EMAIL}`}
@@ -213,7 +213,7 @@ function Home() {
             },
             {
               q: "Why is it only $29?",
-              a: "Launch pricing. The first cohort gets it cheap in exchange for being early — the price doubles to $58 once they're in. A single 200-question review costs 10–15 hours of your time; even at full price this pays for itself ~20× on the first run.",
+              a: "Launch pricing, published as a ladder that executes exactly as written: the first 25 buyers pay $29, buyers 26–100 pay $58, and the final price is $79. A single 200-question review costs 10–15 hours of your time — even at the final price it pays for itself ~15× on the first run. And if it doesn't deliver: 60-day full refund, no questions asked.",
             },
             {
               q: "How does demo mode work?",
@@ -238,7 +238,7 @@ function Home() {
           href={PAYMENT_LINK}
           className="rounded-lg bg-indigo-600 px-8 py-4 text-lg font-semibold text-white shadow hover:bg-indigo-500"
         >
-          Get TrustDeck — $29 launch price — doubles to $58 after the first cohort
+          Get TrustDeck — $29 for the first 25 buyers · then $58 · $79 final
         </a>
         <p className="mt-3 text-sm text-gray-500">
           One questionnaire saves $500+ of internal labor. Keeps getting better.
