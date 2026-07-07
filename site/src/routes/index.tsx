@@ -213,7 +213,7 @@ function Home() {
             },
             {
               q: "Why is it only $29?",
-              a: "Launch pricing, published as a ladder that executes exactly as written: the first 25 buyers pay $29, buyers 26–100 pay $58, and the final price is $79. A single 200-question review costs 10–15 hours of your time — even at the final price it pays for itself ~15× on the first run. And if it doesn't deliver: 60-day full refund, no questions asked.",
+              a: "Launch pricing, published as a ladder that executes exactly as written: the first 25 buyers pay $29, buyers 26–100 pay $58, and the final price is $79. A single 200-question review costs 10–15 hours of your time — even at the final price it pays for itself ~15× on the first run. Backed by the fabrication warranty: if it ever claims something your evidence doesn't support, report it within 60 days for a full refund.",
             },
             {
               q: "How does demo mode work?",
