@@ -22,7 +22,7 @@
     "question": "Describe encryption of customer data at rest and in transit, including key management and rotation. Do you support customer-managed keys (CMK)?",
     "answer": "Customer data at rest is encrypted with AES-256 via Azure Storage encryption and SQL TDE, with keys in Azure Key Vault and automatic annual rotation. Data in transit is protected with TLS 1.2 minimum (TLS 1.3 preferred) and HSTS on all public endpoints. Customer-managed keys (CMK/BYOK) are supported on the Enterprise tier via customer-held Azure Key Vault. (Onboarding Interview, Q7-Q9)",
     "category": "Demo (Relay sample data)",
-    "confidence": "green",
+    "confidence": "yellow",
     "source": "corpus",
     "watermark": "DEMO \u2014 Relay sample data"
   },
@@ -76,7 +76,7 @@
     "question": "Describe your backup strategy and RTO/RPO targets. Provide the date and results of your most recent disaster recovery test.",
     "answer": "Backups use continuous geo-redundant replication plus nightly encrypted backups. Target RTO is 12 hours and target RPO is 1 hour. The most recent disaster recovery failover test was conducted on March 19, 2026 and passed — production was restored in Central US in 9 hours and 40 minutes. Restore tests are performed quarterly. (Onboarding Interview, Q18)",
     "category": "Demo (Relay sample data)",
-    "confidence": "green",
+    "confidence": "yellow",
     "source": "corpus",
     "watermark": "DEMO \u2014 Relay sample data"
   },
@@ -122,7 +122,7 @@
     "answer": "NEEDS OWNER INPUT — Cyber liability insurance details (carrier and per-incident coverage amount) are not stored in the Trust Corpus. No draft available.",
     "category": "Demo (Relay sample data)",
     "confidence": "red",
-    "source": "corpus",
+    "source": "escalated — human-only (legal)",
     "watermark": "DEMO \u2014 Relay sample data"
   },
   {
@@ -131,7 +131,7 @@
     "answer": "NEEDS OWNER INPUT — Indemnification terms for breach of systems are not stored in the Trust Corpus (legal/contractual domain). No draft available.",
     "category": "Demo (Relay sample data)",
     "confidence": "red",
-    "source": "corpus",
+    "source": "escalated — human-only (legal)",
     "watermark": "DEMO \u2014 Relay sample data"
   }
 ]
