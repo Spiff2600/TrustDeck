@@ -31,7 +31,7 @@ Links used throughout:
    | CAIQ-Lite onboarded | 118/124 (95%), 4 🟡, 2 🔴, ~12 min review vs ~496 min manual | [`benchmark/caiq-lite-benchmark-onboarded-memo.md`](../benchmark/caiq-lite-benchmark-onboarded-memo.md) |
    | Interview effect | ~45-min interview closed 62 of 68 gaps | [`benchmark/caiq-lite-benchmark-onboarded-memo.md`](../benchmark/caiq-lite-benchmark-onboarded-memo.md) |
    | Relay live run | 9 🟢 / 4 🟡 / 2 🔴; Auditor removed 2 overclaims (Q5, Q10) | [`relay-coverage-memo.md`](../relay-coverage-memo.md), [`relay-auditor-verdict.json`](../relay-auditor-verdict.json) |
-   | Price | $29 launch, doubles to $58 | [`marketplace-listing.md`](../marketplace-listing.md) |
+   | Price | $29 first 25 buyers → $58 through buyer 100 → $79 final | [`marketplace-listing.md`](../marketplace-listing.md) |
    | Pain framing | "212-question questionnaire, 10–15 hours" | [`README.md`](../README.md) — this is framing, not a measured benchmark; always phrase it as an estimate |
 
 2. **Zero customers so far — never imply otherwise.** Everything we can show
@@ -151,7 +151,7 @@ commit link — that thread becomes the best ad on the page.
 
 **Tweet 6 — price mechanic**
 
-> It's $29 on the cto.new marketplace — launch price for the first cohort, then it doubles to $58.
+> It's $29 on the cto.new marketplace for the first 25 buyers — then $58 through buyer 100, then a final $79. The ladder is published in the listing and executes exactly as written.
 >
 > In exchange I ask one thing: if it ever claims something your evidence doesn't support, file the "Report a fabrication" issue. Those are release blockers.
 
@@ -281,9 +281,10 @@ welcome there; still disclose):
 > 1. **CI on the marketing.** Our repo's build fails if any number in the
 >    README or memos stops reconciling with the underlying CSV/JSON
 >    artifacts. Collateral is code.
-> 2. **Public doubling mechanic.** $29 one-time at launch, doubles to $58
->    after the first cohort. It's written into the listing, so it's a
->    commitment, not a countdown-timer gimmick.
+> 2. **Public pricing ladder.** $29 one-time for the first 25 buyers,
+>    $58 through buyer 100, $79 final. It's written into the listing
+>    with hard triggers, so it's a commitment, not a countdown-timer
+>    gimmick.
 >
 > No customers yet — launched this week, everything public is a worked
 > example. Repo with all artifacts: https://github.com/Spiff2600/TrustDeck
