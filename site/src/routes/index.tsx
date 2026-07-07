@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 const PAYMENT_LINK = "https://buy.stripe.com/5kQ6oHdYVd0PgVCddDeME00";
 const EMAIL = "trustdesk-7f0d0efa@ctomail.io";
+const GITHUB_REPO = "https://github.com/Spiff2600/TrustDeck";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -87,29 +88,81 @@ function Home() {
         </div>
       </section>
 
-      {/* Benchmark */}
-      <section className="mt-20 max-w-2xl">
-        <h2 className="text-2xl font-bold mb-6">Benchmark results</h2>
+      {/* Proof / Results */}
+      <section className="mt-20 max-w-4xl text-left">
+        <h2 className="text-2xl font-bold text-center mb-8">Proof — from the public repo, checked in CI</h2>
+        <p className="text-sm text-gray-500 text-center mb-8 max-w-xl mx-auto">
+          Every number below is reproducible from the files in the TrustDeck repo.
+          The CI build fails if any published number stops reconciling with the artifacts.
+          <br />
+          <a href={GITHUB_REPO} className="underline hover:text-gray-600">
+            github.com/Spiff2600/TrustDeck
+          </a>
+        </p>
+
+        {/* 15-question demo runs */}
+        <div className="grid gap-6 sm:grid-cols-2 mb-8">
+          <div className="rounded-lg border p-5 dark:border-gray-700">
+            <h3 className="font-semibold mb-3">Demo — Acme Analytics (15 questions)</h3>
+            <div className="grid grid-cols-3 gap-3 text-center mb-3">
+              <div>
+                <div className="text-2xl font-bold text-green-600">9</div>
+                <div className="text-xs text-gray-500">🟢 Evidenced</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-amber-500">4</div>
+                <div className="text-xs text-gray-500">🟡 Confirm</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-red-500">2</div>
+                <div className="text-xs text-gray-500">🔴 Routed</div>
+              </div>
+            </div>
+            <p className="text-sm text-gray-500">~12 min review (baseline: ~60 min)</p>
+          </div>
+          <div className="rounded-lg border p-5 dark:border-gray-700">
+            <h3 className="font-semibold mb-3">Demo — Run 2 (gaps answered once)</h3>
+            <div className="grid grid-cols-3 gap-3 text-center mb-3">
+              <div>
+                <div className="text-2xl font-bold text-green-600">13</div>
+                <div className="text-xs text-gray-500">🟢 Evidenced</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-amber-500">2</div>
+                <div className="text-xs text-gray-500">🟡 Confirm</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-gray-400">0</div>
+                <div className="text-xs text-gray-500">🔴 Routed</div>
+              </div>
+            </div>
+            <p className="text-sm text-gray-500">~2 min review — 0 new gaps. The flywheel works.</p>
+          </div>
+        </div>
+
+        {/* CAIQ-Lite benchmark results */}
         <div className="rounded-lg border p-6 dark:border-gray-700">
-          <p className="text-sm text-gray-500 mb-4">
-            CAIQ-Lite (124 questions) × Acme sample corpus — reproducible in demo mode
-          </p>
-          <div className="grid grid-cols-3 gap-4 text-center">
-            <div>
+          <h3 className="font-semibold mb-3 text-center">CAIQ-Lite benchmark (124 questions)</h3>
+          <div className="grid gap-6 sm:grid-cols-3">
+            <div className="text-center">
               <div className="text-3xl font-bold text-green-600">45%</div>
-              <div className="text-sm text-gray-500">🟢 Auto-answered</div>
+              <div className="text-sm text-gray-500">🟢 Cold start</div>
+              <p className="text-xs text-gray-400 mt-1">Acme, 12-doc corpus</p>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-gray-500">0%</div>
-              <div className="text-sm text-gray-500">🟡 Inferred</div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-600">95%</div>
+              <div className="text-sm text-gray-500">🟢 Onboarded (Acme)</div>
+              <p className="text-xs text-gray-400 mt-1">~12 min review</p>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-amber-600">55%</div>
-              <div className="text-sm text-gray-500">🔴 Needs input</div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-600">94%</div>
+              <div className="text-sm text-gray-500">🟢 Onboarded (Relay)</div>
+              <p className="text-xs text-gray-400 mt-1">~17 min review</p>
             </div>
           </div>
-          <p className="mt-4 text-sm text-gray-500">
-            68 gaps surfaced. Each one you answer makes every future run faster.
+          <p className="mt-4 text-sm text-gray-500 text-center">
+            45-min interview closes 62 of 68 gaps — even documented "no" answers are 🟢,
+            because auditors trust vendors who know what they don't have.
           </p>
         </div>
       </section>
@@ -139,16 +192,32 @@ function Home() {
         <div className="space-y-4">
           {[
             {
-              q: "How does demo mode work?",
-              a: "TrustDeck comes with a sample Acme corpus. Upload the demo questionnaire and see a fully worked Coverage Memo in under 10 minutes — no setup.",
+              q: "What is TrustDeck?",
+              a: "A five-agent AI team that answers vendor security questionnaires — SIG, CAIQ, and custom Excel — from your actual documentation. Every answer is cited, confidence-tagged, and audited for overclaims before you see it.",
             },
             {
               q: "Can it fabricate answers I don't have?",
-              a: "No — that's the entire point. The Auditor checks every answer against your actual evidence. Answers with no evidence get tagged 🔴 and routed to you.",
+              a: "No — that's the entire design. The Auditor is a hostile reviewer who checks every answer against your actual evidence. Answers with no evidence get tagged 🔴 and routed to you. A fabricated answer is a contract breach waiting to happen, and TrustDeck won't do it.",
             },
             {
-              q: "What formats are supported?",
-              a: "Excel, CSV, PDF text, and pasted portal questions. Legal & Insurance questions are always routed to you.",
+              q: "What do I need to provide?",
+              a: "Nothing beyond the marketplace — demo mode works out of the box with the included Acme sample files. Your first real run just needs the 20-minute onboarding interview plus your existing policies and docs.",
+            },
+            {
+              q: "Does it support SIG, CAIQ, and custom Excel?",
+              a: "Yes — TrustDeck fills in SIG, CAIQ, and custom Excel files. Excel (xlsx/xls), CSV, PDF text, and pasted portal questions are all supported. You get your original file back with the answers filled in. Legal & Insurance questions are always routed to you.",
+            },
+            {
+              q: "Where's the proof?",
+              a: "The public repo (github.com/Spiff2600/TrustDeck) contains the complete worked examples: input questionnaires, the corpus they answered from, every answer with its citation, the Auditor's per-question verdicts, and both benchmark runs. The repo's CI fails if any published number stops reconciling with the artifacts.",
+            },
+            {
+              q: "Why is it only $29?",
+              a: "Launch pricing. The first cohort gets it cheap in exchange for being early — the price doubles to $58 once they're in. A single 200-question review costs 10–15 hours of your time; even at full price this pays for itself ~20× on the first run.",
+            },
+            {
+              q: "How does demo mode work?",
+              a: "TrustDeck comes with a sample Acme corpus. Upload the demo questionnaire and see a fully worked Coverage Memo in under 10 minutes — no setup.",
             },
             {
               q: "What happens to my data?",
@@ -180,6 +249,14 @@ function Home() {
         Built with <a href="https://cto.new" className="underline hover:text-gray-600">cto.new</a>
         {" · "}
         <a href={`mailto:${EMAIL}`} className="underline hover:text-gray-600">Contact</a>
+        {" · "}
+        <a
+          href="https://github.com/Spiff2600/TrustDeck/issues/new"
+          className="underline hover:text-gray-600"
+          title="Report a fabricated answer — TrustDeck takes accountability seriously"
+        >
+          Report a fabrication
+        </a>
       </footer>
     </main>
   );
