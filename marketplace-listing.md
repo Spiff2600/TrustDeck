@@ -40,7 +40,7 @@ For B2B SaaS founders, sales engineers, and fractional CISOs. Built by a cloud s
 
 **Tags:** security-questionnaire, SOC2, CAIQ, SIG, vendor-security-review, compliance, GRC, sales-enablement, trust, B2B-SaaS
 
-**Price:** $29 (one-time) — **launch price for the first cohort; doubles to $58 once early-adopter seats are gone.** One 200-question review costs 10–15 hours of your time; even at full price this pays for itself ~20× on the first run.
+**Price:** $29 launch price — doubles to $58 after the first cohort
 
 ---
 
