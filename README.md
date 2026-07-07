@@ -31,6 +31,7 @@ Auditor agent red-teams every draft for overclaims before you ever see it.
 | [Demo, run 2](demo/acme-coverage-memo-run2.md) (6 gaps answered once) | 15 | 13 (87%) | 2 | 0 | ~2 min |
 | [CAIQ-Lite, cold](benchmark/caiq-lite-benchmark-memo.md) (12-doc corpus) | 124 | 56 (45%) | 0 | 68 | ~272 min |
 | [CAIQ-Lite, onboarded](benchmark/caiq-lite-benchmark-onboarded-memo.md) (after 45-min interview) | 124 | 118 (95%) | 4 | 2 | ~12 min |
+| [CAIQ-Lite, Relay onboarded](benchmark/caiq-lite-benchmark-relay-memo.md) (second corpus) | 124 | 116 (94%) | 5 | 3 | ~17 min |
 | [Relay demo](relay-coverage-memo.md) (run live by the deployed product) | 15 | 9 (60%) | 4 | 2 | ~12 min |
 
 Zero fabrications in every run — including honest, documented "no" answers
