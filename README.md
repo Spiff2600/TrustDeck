@@ -38,9 +38,10 @@ Zero fabrications in every run — including honest, documented "no" answers
 (no bug bounty, no SBOMs, no CMK). An evidenced "no" is a 🟢, because
 auditors trust vendors who know what they don't have.
 
-The Relay run is special: it was produced end-to-end by the deployed
-product — a live onboarding interview followed by the full pipeline,
-including two overclaims the Auditor caught and removed:
+The Relay run is special: it was produced by the deployed product against
+a second fictional company — owner-supplied facts gathered in a live
+onboarding interview, then the full pipeline — including two overclaims
+the Drafter wrote and the Auditor deleted:
 
 <p align="center">
   <img src="assets/auditor-says-no.svg" alt="Two real Auditor verdicts from the live Relay run: a plausible RBAC claim and a training/NDA claim, both deleted because the cited evidence didn't support them" width="880"/>
@@ -140,6 +141,25 @@ early. Two ways they shape the product:
   if TrustDeck ever claims something your evidence doesn't support, that
   report is a release blocker. Holding us to the zero-fabrication promise is
   the whole point.
+
+## Known limitations
+
+- **Conservative by design — it can understate you.** If the cited evidence
+  doesn't support a claim, the claim doesn't ship, even when it's true
+  elsewhere in your corpus (watch the Auditor cut a true-but-uncited
+  training/NDA claim in [relay-auditor-verdict.json](relay-auditor-verdict.json),
+  Q10). The Coverage Memo flags these so you can add the citation.
+- **Runs vary — we measured it instead of hiding it.** This is an LLM
+  pipeline; borderline questions can grade differently run to run.
+  [Three blind re-runs of the cold benchmark](benchmark/variance-study.md)
+  scored 56–60/124 — the published number is the floor, and the
+  disagreements are listed by question ID.
+- **Review time counts decisions, not reading.** The ~12-minute figures
+  cover 🟡 confirms and 🔴 routing; skimming 🟢 answers before you send
+  them — which you should do — adds a few minutes.
+- **SIG:** TrustDeck fills in the SIG file your customer sends you; the
+  public worked examples are CAIQ-format because SIG content is licensed
+  by Shared Assessments.
 
 ## Ground rules
 

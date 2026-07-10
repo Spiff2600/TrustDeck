@@ -211,6 +211,21 @@ for f in ("relay-onboarding-results.md", "relay-corpus.json",
     hits = [w for w in STALE if w in s]
     check(f"{f} carries no stale simulated facts", not hits, f"found {hits}")
 
+print("== pricing & brand ==")
+pricing = json.loads(read("pricing.json"))
+prices = [str(t["price_usd"]) for t in pricing["ladder"]]
+check("pricing.json ladder is 29/58/79", prices == ["29", "58", "79"])
+SURFACES = ("README.md", "marketplace-listing.md",
+            "site/src/routes/index.tsx", "marketing/launch-kit.md")
+for f in SURFACES:
+    s = read(f)
+    missing = [p for p in prices if f"${p}" not in s]
+    check(f"{f} cites every ladder price", not missing, f"missing {missing}")
+    check(f"{f} has no stale 'doubles to' pricing", "doubles to $" not in s)
+    check(f"{f} carries no 'TrustDesk' brand misspelling", "TrustDesk" not in s)
+check("site.json businessName is TrustDeck",
+      json.loads(read("site/site.json"))["businessName"] == "TrustDeck")
+
 print()
 if FAILURES:
     print(f"{len(FAILURES)} consistency check(s) FAILED")
