@@ -145,7 +145,7 @@ function Home() {
           <h3 className="font-semibold mb-3 text-center">CAIQ-Lite benchmark (124 questions)</h3>
           <div className="grid gap-6 sm:grid-cols-3">
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">45%</div>
+              <div className="text-3xl font-bold text-green-600">44%</div>
               <div className="text-sm text-gray-500">🟢 Cold start</div>
               <p className="text-xs text-gray-400 mt-1">Acme, 12-doc corpus</p>
             </div>
@@ -161,7 +161,7 @@ function Home() {
             </div>
           </div>
           <p className="mt-4 text-sm text-gray-500 text-center">
-            45-min interview closes 62 of 68 gaps — even documented "no" answers are 🟢,
+            45-min interview closes 63 of 69 gaps — even documented "no" answers are 🟢,
             because auditors trust vendors who know what they don't have.
           </p>
         </div>

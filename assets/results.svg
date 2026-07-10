@@ -15,7 +15,7 @@
   <text x="36" y="126" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#c9d6e3">Cold corpus (12 docs)</text>
   <rect x="36" y="138" width="808" height="34" rx="8" fill="#24374f"/>
   <rect x="36" y="138" width="364" height="34" rx="8" fill="#3ddc84"/>
-  <text x="52" y="161" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d1b2a">56 🟢 evidenced (45%)</text>
+  <text x="52" y="161" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d1b2a">56 🟢 evidenced (44%)</text>
   <text x="700" y="161" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#9fb3c8">68 gaps logged</text>
 
   <!-- onboarded bar -->

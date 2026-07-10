@@ -25,7 +25,7 @@ Every answer is confidence-tagged:
 🟢 evidenced → send it · 🟡 inferred → 1-min confirm · 🔴 no basis → routed to you, never guessed.
 
 **🚀 Results** (benchmark: CAIQ-Lite, 124 questions — every number reproducible from the public repo, checked in CI):
-• Cold start, minimal corpus → 56/124 auto-answered with citations (45%)
+• Cold start, minimal corpus → 55/124 auto-answered with citations (44%)
 • After the 45-minute onboarding interview → **118/124 (95%)**, review time ~12 min vs ~8 hours manual
 • Flywheel, measured: demo run 1 = 9/15 🟢, ~12 min review; owner answers 6 gaps once; run 2 = 13/15 🟢, ~2 min review, 0 new gaps
 • Zero fabrications in every run — no overclaims, no invented controls

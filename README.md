@@ -22,14 +22,14 @@ Auditor agent red-teams every draft for overclaims before you ever see it.
 ## Results
 
 <p align="center">
-  <img src="assets/results.svg" alt="CAIQ-Lite: 45% auto-answered cold, 95% after onboarding. Demo flywheel: run 1 nine green and 12 minutes review, run 2 thirteen green and 2 minutes review" width="880"/>
+  <img src="assets/results.svg" alt="CAIQ-Lite: 44% auto-answered cold, 95% after onboarding. Demo flywheel: run 1 nine green and 12 minutes review, run 2 thirteen green and 2 minutes review" width="880"/>
 </p>
 
 | Run | Questions | 🟢 evidenced | 🟡 confirm | 🔴 routed to you | Your review time |
 |---|---|---|---|---|---|
 | [Demo, run 1](demo/acme-coverage-memo.md) (cold corpus) | 15 | 9 (60%) | 4 | 2 | ~12 min |
 | [Demo, run 2](demo/acme-coverage-memo-run2.md) (6 gaps answered once) | 15 | 13 (87%) | 2 | 0 | ~2 min |
-| [CAIQ-Lite, cold](benchmark/caiq-lite-benchmark-memo.md) (12-doc corpus) | 124 | 56 (45%) | 0 | 68 | ~272 min |
+| [CAIQ-Lite, cold](benchmark/caiq-lite-benchmark-memo.md) (12-doc corpus) | 124 | 55 (44%) | 0 | 69 | ~276 min |
 | [CAIQ-Lite, onboarded](benchmark/caiq-lite-benchmark-onboarded-memo.md) (after 45-min interview) | 124 | 118 (95%) | 4 | 2 | ~12 min |
 | [CAIQ-Lite, Relay onboarded](benchmark/caiq-lite-benchmark-relay-memo.md) (second corpus) | 124 | 116 (94%) | 5 | 3 | ~17 min |
 | [Relay demo](relay-coverage-memo.md) (run live by the deployed product) | 15 | 9 (60%) | 4 | 2 | ~12 min |
@@ -152,7 +152,7 @@ early. Two ways they shape the product:
 - **Runs vary — we measured it instead of hiding it.** This is an LLM
   pipeline; borderline questions can grade differently run to run.
   [Three blind re-runs of the cold benchmark](benchmark/variance-study.md)
-  scored 56–60/124 — the published number is the floor, and the
+  scored 58–60/124 against the then-published 56 — the published number is the floor, and the
   disagreements are listed by question ID.
 - **Review time counts decisions, not reading.** The ~12-minute figures
   cover 🟡 confirms and 🔴 routing; skimming 🟢 answers before you send
