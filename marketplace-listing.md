@@ -42,7 +42,7 @@ For B2B SaaS founders, sales engineers, and fractional CISOs. Built by a cloud s
 
 **Tags:** security-questionnaire, SOC2, CAIQ, SIG, vendor-security-review, compliance, GRC, sales-enablement, trust, B2B-SaaS
 
-**Price:** $29 launch price — doubles to $58 after the first cohort
+**Price:** $29 for the first 25 buyers → $58 through buyer 100 → $79 final. The ladder is published in advance and executes exactly as written. Backed by the fabrication warranty: if TrustDeck ever claims something your evidence doesn't support, report it within 60 days for a full refund.
 
 ---
 
@@ -70,7 +70,10 @@ A: Yes — TrustDeck fills in the SIG file your customer sends you. (SIG content
 A: The public repo contains the complete worked example: input questionnaire, the corpus it answered from, every answer with its citation, the Auditor's per-question verdicts — including the four answers it downgraded — and both benchmark runs. The repo's CI fails if any published number stops reconciling with the artifacts.
 
 **Q: Why is it only $29?**
-A: Launch pricing. The first cohort gets it cheap in exchange for being early — the price doubles once they're in. If you're reading this at $29, you're the cohort.
+A: Launch pricing, published as a ladder: the first 25 buyers pay $29, buyers 26–100 pay $58, and the final price is $79. Early buyers take early-product risk and get the lowest price in exchange — and the steps execute exactly as written, because a zero-fabrication product doesn't get to play games with its pricing either. If you're reading this at $29, you're the cohort.
+
+**Q: What's the guarantee?**
+A: A warranty on the promise that matters. If TrustDeck ever claims something your evidence doesn't support — or can't do something this listing says it does — report it within 60 days for a full refund. Fabrication reports are treated as release-blocking bugs. (There's deliberately no generic no-questions-asked refund: the output is a filled questionnaire you keep, so the guarantee backs the honesty of what's in it.)
 
 **Q: Is my data secure?**
 A: Your Trust Corpus stays in your environment. Only upload policies and executive summaries — never credentials, keys, or secrets.

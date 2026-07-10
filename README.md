@@ -127,9 +127,10 @@ Tier 1+2 (~45 min total) covers all 17 CCM v4 domains — full CAIQ class.
 
 ## Early adopters
 
-TrustDeck is at launch pricing — the first cohort gets it cheap in exchange
-for being early, and the price doubles once they're in. Two ways early users
-shape the product:
+TrustDeck is at launch pricing, published as a ladder that executes exactly
+as written: the first 25 buyers pay $29, buyers 26–100 pay $58, and the
+final price is $79. Early users get the low price in exchange for being
+early. Two ways they shape the product:
 
 - **[📊 Share your results](../../issues/new?template=share-results.md)** —
   post your Coverage Memo numbers from a real run (stats only, nothing
