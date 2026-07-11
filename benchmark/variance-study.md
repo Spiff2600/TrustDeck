@@ -16,7 +16,7 @@ documented "no" counts); inference or partial coverage = GAP.
 
 | Run | STRONG | % of 124 |
 |---|---|---|
-| Published cold run | 56 | 45% |
+| Published cold run (at time of study) | 56 | 45% |
 | Blind grader 1 | 60 | 48% |
 | Blind grader 2 | 58 | 47% |
 | Blind grader 3 | 60 | 48% |
@@ -40,9 +40,12 @@ inference*, and *citation answers an adjacent aspect of the question*.
   question asks the production-access *mechanism* (VPN / zero-trust /
   bastion); the cited Access Control Policy §3 documents *who* gets access
   and credential lifetime, not the mechanism. The citation is real; its fit
-  to the question is partial. **Flagged for re-audit.** If it fails, we
-  downgrade it and every dependent number updates — [CI enforces the
-  ripple](../scripts/check_consistency.py).
+  to the question is partial. **Re-audited 2026-07-08: the graders were right.** The corpus documents who
+  may access production and the credential model, not the mechanism the
+  question asks. CAIQ-094 was downgraded to a gap and every dependent
+  number updated (55/124 = 44% cold, 69 gaps) — [CI enforces the
+  ripple](../scripts/check_consistency.py). The variance study caught a
+  soft green in our own published run; that is the system working.
 
 In a live run these seven questions are precisely what the product tags
 🟡 *confirm* and routes to a human — the cold benchmark's binary rubric

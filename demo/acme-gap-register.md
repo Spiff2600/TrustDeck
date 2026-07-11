@@ -31,7 +31,7 @@ Each entry: `[Date] | Q<id> | <Domain> | <Strength> | <Detail>`
 
 ### 2026-07-05 — CAIQ Lite Benchmark Run (124 questions)
 
-**Run stats:** 56 questions with STRONG evidence, 68 questions with no evidence (NONE).
+**Run stats:** 55 questions with STRONG evidence, 69 questions with no evidence (NONE).
 
 **Gap categories by CAIQ domain (all NONE):**
 
@@ -44,7 +44,7 @@ Each entry: `[Date] | Q<id> | <Domain> | <Strength> | <Detail>`
 | HR Security (HRS) | CAIQ-070, 074-075 (3) | No background check scope, contractor details, or clear desk policy |
 | Identity (IAM) | CAIQ-083-085 (3) | No service account inventory, rotation, or PAM |
 | Portability (IPY) | CAIQ-086-089 (4) | No data export process or portability details |
-| Infrastructure (IVS) | CAIQ-092-093, 096-098 (5) | No default-deny rules, WAF/DDoS, vuln scan cadence, or patching details |
+| Infrastructure (IVS) | CAIQ-092-094, 096-098 (6) | No default-deny rules, WAF/DDoS, vuln scan cadence, or patching details |
 | Logging (LOG) | CAIQ-103, 105 (2) | No extended retention policy or log integrity monitoring |
 | Incident Response (SEF) | CAIQ-107, 109-111 (4) | No IR team structure, detection details, bug bounty, or post-mortems |
 | Supply Chain (STA) | CAIQ-112-115, 117 (5) | No vendor assessment process or breach notification terms |
@@ -54,7 +54,7 @@ Each entry: `[Date] | Q<id> | <Domain> | <Strength> | <Detail>`
 | Encryption (CEK) | CAIQ-044 (1) | No CMK support |
 | Compliance (A&A) | CAIQ-006-010 (5) | No internal audit, risk assessment, or risk register details |
 
-**Total gaps:** 68 NONE results logged across 16 domains.
+**Total gaps:** 69 NONE results logged across 16 domains.
 See [caiq-lite-benchmark-completed.csv](../benchmark/caiq-lite-benchmark-completed.csv)
 for the full filled-in run, and
 [caiq-lite-benchmark-onboarded-memo.md](../benchmark/caiq-lite-benchmark-onboarded-memo.md)

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const PAYMENT_LINK = "https://buy.stripe.com/5kQ6oHdYVd0PgVCddDeME00";
+const LISTING = "https://cto.new/business/marketplace/j-s-team-trustdesk-13d1";
 const EMAIL = "trustdesk-7f0d0efa@ctomail.io";
 const GITHUB_REPO = "https://github.com/Spiff2600/TrustDeck";
 
@@ -30,7 +30,7 @@ function Home() {
       {/* CTA */}
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <a
-          href={PAYMENT_LINK}
+          href={LISTING}
           className="rounded-lg bg-indigo-600 px-6 py-3 text-base font-semibold text-white shadow hover:bg-indigo-500"
         >
           Buy now — $29 for the first 25 buyers · then $58 · $79 final
@@ -145,7 +145,7 @@ function Home() {
           <h3 className="font-semibold mb-3 text-center">CAIQ-Lite benchmark (124 questions)</h3>
           <div className="grid gap-6 sm:grid-cols-3">
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">45%</div>
+              <div className="text-3xl font-bold text-green-600">44%</div>
               <div className="text-sm text-gray-500">🟢 Cold start</div>
               <p className="text-xs text-gray-400 mt-1">Acme, 12-doc corpus</p>
             </div>
@@ -161,7 +161,7 @@ function Home() {
             </div>
           </div>
           <p className="mt-4 text-sm text-gray-500 text-center">
-            45-min interview closes 62 of 68 gaps — even documented "no" answers are 🟢,
+            45-min interview closes 63 of 69 gaps — even documented "no" answers are 🟢,
             because auditors trust vendors who know what they don't have.
           </p>
         </div>
@@ -235,7 +235,7 @@ function Home() {
       {/* Final CTA */}
       <div className="mt-20 mb-12">
         <a
-          href={PAYMENT_LINK}
+          href={LISTING}
           className="rounded-lg bg-indigo-600 px-8 py-4 text-lg font-semibold text-white shadow hover:bg-indigo-500"
         >
           Get TrustDeck — $29 for the first 25 buyers · then $58 · $79 final

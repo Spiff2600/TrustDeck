@@ -2,19 +2,19 @@
 > **DEMO — Acme sample data.** Reproducible benchmark: CAIQ-Lite (124 questions) × Acme Sample Trust Corpus.
 File: caiq-lite-benchmark.csv — 124 questions · Pipeline run: ~12 min
 
-🟢 Auto-answered, fully evidenced ........ 56 (45%)
+🟢 Auto-answered, fully evidenced ........ 55 (44%)
 🟡 Drafted, needs your confirmation ....... 0 (0%)
-🔴 Needs your input ....................... 68 (55%)
+🔴 Needs your input ....................... 69 (56%)
      → 0 legal/insurance (routed human-only)
-     → 68 no evidence in corpus
+     → 69 no evidence in corpus
 
-Your review time: ~272 min   (manual baseline: ~496 min)
+Your review time: ~276 min   (manual baseline: ~496 min)
 
 New gaps logged — answer once, reuse forever:
-68 gaps across 16 domains. Major areas needing corpus enrichment:
+69 gaps across 16 domains. Major areas needing corpus enrichment:
 1. AppSec (11) — SAST, SCA, SBOM, secrets scanning, vulnerability disclosure
 2. Change Control (7) — CI/CD pipeline, emergency change, IaC, drift detection
-3. Infrastructure (5) — vuln scanning cadence, patching, WAF/DDoS, default-deny
+3. Infrastructure (6) — vuln scanning cadence, patching, WAF/DDoS, default-deny
 4. Supply Chain (5) — vendor assessment, breach notification, SBOM
 5. Compliance/Internal Audit (5) — risk assessment, risk register, internal audit
 6. BC/DR (4) — DR test date, SLA, status page, capacity monitoring

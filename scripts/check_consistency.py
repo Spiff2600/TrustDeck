@@ -113,8 +113,8 @@ check("benchmark has 124 questions", len(bench) == 124, f"got {len(bench)}")
 check("completed benchmark has 124 rows", len(completed) == 124, f"got {len(completed)}")
 strong = [r for r in completed if r["Confidence"].startswith("\U0001F7E2")]
 gaps = [r for r in completed if r["Confidence"].startswith("\U0001F534")]
-check("completed = 56 strong + 68 gaps",
-      (len(strong), len(gaps)) == (56, 68), f"got {len(strong)}/{len(gaps)}")
+check("completed = 55 strong + 69 gaps",
+      (len(strong), len(gaps)) == (55, 69), f"got {len(strong)}/{len(gaps)}")
 check("every strong answer carries a citation",
       all(re.search(r"\([^)]+\)", r["Vendor Response"]) for r in strong))
 check("every gap row says NEEDS OWNER INPUT",
@@ -122,16 +122,16 @@ check("every gap row says NEEDS OWNER INPUT",
 
 memo_cold = read("benchmark/caiq-lite-benchmark-memo.md")
 tc = memo_tallies(memo_cold)
-check("cold memo says 56 strong / 68 gaps",
-      tc[0][0] == 56 and any(c == 68 for c, _ in tc), f"memo says {tc}")
+check("cold memo says 55 strong / 69 gaps",
+      tc[0][0] == 55 and any(c == 69 for c, _ in tc), f"memo says {tc}")
 domain_counts = [int(m) for m in re.findall(r"^\d+\.\s+.*?\((\d+)\)", memo_cold, re.M)]
-check("cold memo domain breakdown sums to 68",
-      sum(domain_counts) == 68, f"sums to {sum(domain_counts)}")
+check("cold memo domain breakdown sums to 69",
+      sum(domain_counts) == 69, f"sums to {sum(domain_counts)}")
 
 register = read("demo/acme-gap-register.md")
 reg_counts = [int(m) for m in re.findall(r"\((\d+)\)\s*\|", register)]
-check("gap register domain table sums to 68",
-      sum(reg_counts) == 68, f"sums to {sum(reg_counts)}")
+check("gap register domain table sums to 69",
+      sum(reg_counts) == 69, f"sums to {sum(reg_counts)}")
 
 print("== benchmark (onboarded) ==")
 memo_on = read("benchmark/caiq-lite-benchmark-onboarded-memo.md")
@@ -141,8 +141,8 @@ check("onboarded memo counts sum to 124",
 check("onboarded memo percentages sum to 100",
       sum(p for _, p in to[:3]) == 100, f"got {to}")
 g_on, y_on, r_on = (to[0][0], to[1][0], to[2][0])
-check("onboarded gaps closed + open = 68 cold gaps",
-      (g_on - 56) + y_on + r_on == 68, f"{g_on-56}+{y_on}+{r_on}")
+check("onboarded gaps closed + open = 69 cold gaps",
+      (g_on - 55) + y_on + r_on == 69, f"{g_on-56}+{y_on}+{r_on}")
 rt_on = y_on * 1 + r_on * 4
 check(f"onboarded review time = {rt_on} min", f"~{rt_on} min" in memo_on)
 
@@ -210,6 +210,21 @@ for f in ("relay-onboarding-results.md", "relay-corpus.json",
     s = read(f)
     hits = [w for w in STALE if w in s]
     check(f"{f} carries no stale simulated facts", not hits, f"found {hits}")
+
+print("== pricing & brand ==")
+pricing = json.loads(read("pricing.json"))
+prices = [str(t["price_usd"]) for t in pricing["ladder"]]
+check("pricing.json ladder is 29/58/79", prices == ["29", "58", "79"])
+SURFACES = ("README.md", "marketplace-listing.md",
+            "site/src/routes/index.tsx", "marketing/launch-kit.md")
+for f in SURFACES:
+    s = read(f)
+    missing = [p for p in prices if f"${p}" not in s]
+    check(f"{f} cites every ladder price", not missing, f"missing {missing}")
+    check(f"{f} has no stale 'doubles to' pricing", "doubles to $" not in s)
+    check(f"{f} carries no 'TrustDesk' brand misspelling", "TrustDesk" not in s)
+check("site.json businessName is TrustDeck",
+      json.loads(read("site/site.json"))["businessName"] == "TrustDeck")
 
 print()
 if FAILURES:

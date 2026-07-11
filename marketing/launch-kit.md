@@ -27,9 +27,9 @@ Links used throughout:
    | Demo run 2 tags | 13 🟢 / 2 🟡 / 0 🔴 | [`demo/acme-coverage-memo-run2.md`](../demo/acme-coverage-memo-run2.md) |
    | Demo run 2 review time | ~2 min | [`demo/acme-coverage-memo-run2.md`](../demo/acme-coverage-memo-run2.md) |
    | Auditor downgrades (Acme) | 4 answers 🟢→🟡 | [`demo/acme-auditor-verdict.json`](../demo/acme-auditor-verdict.json) |
-   | CAIQ-Lite cold | 56/124 cited (45%), 68 gaps | [`benchmark/caiq-lite-benchmark-memo.md`](../benchmark/caiq-lite-benchmark-memo.md) |
+   | CAIQ-Lite cold | 55/124 cited (44%), 69 gaps | [`benchmark/caiq-lite-benchmark-memo.md`](../benchmark/caiq-lite-benchmark-memo.md) |
    | CAIQ-Lite onboarded | 118/124 (95%), 4 🟡, 2 🔴, ~12 min review vs ~496 min manual | [`benchmark/caiq-lite-benchmark-onboarded-memo.md`](../benchmark/caiq-lite-benchmark-onboarded-memo.md) |
-   | Interview effect | ~45-min interview closed 62 of 68 gaps | [`benchmark/caiq-lite-benchmark-onboarded-memo.md`](../benchmark/caiq-lite-benchmark-onboarded-memo.md) |
+   | Interview effect | ~45-min interview closed 63 of 69 gaps | [`benchmark/caiq-lite-benchmark-onboarded-memo.md`](../benchmark/caiq-lite-benchmark-onboarded-memo.md) |
    | Relay live run | 9 🟢 / 4 🟡 / 2 🔴; Auditor removed 2 overclaims (Q5, Q10) | [`relay-coverage-memo.md`](../relay-coverage-memo.md), [`relay-auditor-verdict.json`](../relay-auditor-verdict.json) |
    | Price | $29 first 25 buyers → $58 through buyer 100 → $79 final | [`marketplace-listing.md`](../marketplace-listing.md) |
    | Pain framing | "212-question questionnaire, 10–15 hours" | [`README.md`](../README.md) — this is framing, not a measured benchmark; always phrase it as an estimate |

@@ -19,7 +19,7 @@ Cold start vs onboarded — same 124 questions, same product:
   Cold corpus (12 docs) ......... 56 🟢 (45%) · ~272 min review
   After Tier 1+2 interview ...... 118 🟢 (95%) · ~12 min review
 
-The interview closed 62 of 68 gaps in one ~45-minute session. That includes
+The interview closed 63 of 69 gaps in one ~45-minute session. That includes
 honest, documented "no" answers (no bug bounty, no SBOMs, no CMK, no change
 advisory board) — an evidenced "no" is a 🟢, because auditors trust vendors
 who know what they don't have. The six items still open are listed in
