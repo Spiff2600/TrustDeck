@@ -167,6 +167,21 @@ function Home() {
         </div>
       </section>
 
+      {/* See the output */}
+      <section className="mt-20 max-w-4xl">
+        <h2 className="text-2xl font-bold text-center mb-8">See the output</h2>
+        <img
+          src="https://raw.githubusercontent.com/Spiff2600/TrustDeck/main/assets/coverage-memo.svg"
+          alt="Coverage Memo from the 15-question demo run: 9 evidenced, 4 quick confirms, 2 routed as legal — about 12 minutes of review instead of 60"
+          className="w-full rounded-lg border dark:border-gray-700 mb-6"
+        />
+        <img
+          src="https://raw.githubusercontent.com/Spiff2600/TrustDeck/main/assets/auditor-says-no.svg"
+          alt="Two real Auditor verdicts from the Relay run: a plausible RBAC claim and a training/NDA claim, both deleted because the cited evidence didn't support them"
+          className="w-full rounded-lg border dark:border-gray-700"
+        />
+      </section>
+
       {/* Agents */}
       <section className="mt-20 max-w-4xl text-left">
         <h2 className="text-2xl font-bold text-center mb-8">The team</h2>
