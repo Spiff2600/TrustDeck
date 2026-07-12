@@ -258,6 +258,9 @@ function Home() {
         <p className="mt-3 text-sm text-gray-500">
           One questionnaire saves $500+ of internal labor. Keeps getting better.
         </p>
+        <p className="mt-2 text-sm text-gray-500">
+          Bought it? <a href={`mailto:${EMAIL}?subject=TrustDeck%20receipt`} className="underline hover:text-gray-600">Email us your receipt</a> for onboarding help and lifetime updates.
+        </p>
       </div>
 
       <footer className="text-sm text-gray-400 dark:text-gray-600">
