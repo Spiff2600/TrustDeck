@@ -8,7 +8,7 @@ Links used throughout:
 
 - Repo: <https://github.com/Spiff2600/TrustDeck>
 - Listing: <https://cto.new/business/marketplace/j-s-team-trustdesk-13d1>
-- Live site: <https://51788e7b5d36a9ddc6ebfa851d392fdf.ctonew.app>
+- Live site: <https://trustdeck.ctonew.app>
 
 ---
 
