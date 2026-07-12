@@ -6,6 +6,6 @@
     { "price_usd": 58, "through_buyer": 100 },
     { "price_usd": 79, "through_buyer": null }
   ],
-  "guarantee": "fabrication warranty: full refund within 60 days if TrustDeck claims something your evidence doesn't support",
+  "guarantee": "refund only for demonstrated non-function (proof of the failed run required); no satisfaction refunds — the output is a keepable file",
   "note": "Canonical pricing source. scripts/check_consistency.py asserts every buyer-facing surface cites these numbers - the price is CI-checked like every other published number."
 }

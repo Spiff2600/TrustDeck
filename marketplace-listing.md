@@ -42,7 +42,7 @@ For B2B SaaS founders, sales engineers, and fractional CISOs. Built by a cloud s
 
 **Tags:** security-questionnaire, SOC2, CAIQ, SIG, vendor-security-review, compliance, GRC, sales-enablement, trust, B2B-SaaS
 
-**Price:** $29 launch — first 25 buyers. Then $58, then $79. Fabrication = full refund within 60 days.
+**Price:** $29
 
 ---
 
@@ -72,8 +72,8 @@ A: The public repo contains the complete worked example: input questionnaire, th
 **Q: Why is it only $29?**
 A: Launch pricing. The first 25 buyers pay $29; then $58; then $79. Early buyers take the early-product risk, so they get the best price. If you're reading this at $29, you're the cohort.
 
-**Q: What's the guarantee?**
-A: If TrustDeck ever claims something your evidence doesn't support — or can't do something this listing says — report it within 60 days for a full refund. Fabrication reports are release-blocking bugs.
+**Q: What if it doesn't work?**
+A: If TrustDeck demonstrably fails to do what this listing says — show us the run — you get your money back. No refunds otherwise: the output is a file you keep.
 
 **Q: Is my data secure?**
 A: Your Trust Corpus stays in your environment. Only upload policies and executive summaries — never credentials, keys, or secrets.
