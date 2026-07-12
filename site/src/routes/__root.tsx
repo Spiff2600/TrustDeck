@@ -8,7 +8,7 @@ import type { ReactNode } from "react";
 
 import appCss from "~/styles/app.css?url";
 
-const SITE_URL = "https://51788e7b5d36a9ddc6ebfa851d392fdf.ctonew.app";
+const SITE_URL = "https://trustdeck.ctonew.app";
 const OG_IMAGE =
   "https://raw.githubusercontent.com/Spiff2600/TrustDeck/main/assets/social-preview.png";
 
