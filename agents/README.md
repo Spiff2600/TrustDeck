@@ -10,11 +10,11 @@ practice.
 ```mermaid
 flowchart LR
     Q[Questionnaire<br/>xlsx / csv / pdf / pasted] --> Lead
-    Lead -->|question inventory| Librarian
+    Lead -->|question inventory + corpus_mode| Librarian
     Lead -->|legal & insurance| Owner((Owner))
     Corpus[(Trust Corpus)] --> Librarian
-    Librarian -->|evidence packets| Drafter
-    Drafter -->|drafts + citations| Auditor
+    Librarian -->|evidence packets + corpus_mode| Drafter
+    Drafter -->|drafts + citations + corpus_mode| Auditor
     Auditor -->|approved / revised / escalated| Assembler
     Assembler --> Out[Filled-in original file<br/>+ Coverage Memo]
     Assembler --> Gaps[Gap Register]
@@ -40,7 +40,12 @@ flowchart LR
 3. **Legal & insurance are human-only.** Insurance, indemnification,
    liability, and contractual-commitment questions route to the owner.
    Owner-approved language may be reused but is always re-confirmed (🟡).
-4. **Demo data never leaks.** Anything derived from the Acme sample corpus is
-   watermarked "DEMO — Acme sample data" and is never cited on a real run.
-5. **An honest "no" is a 🟢.** A documented absence ("no bug bounty program")
+4. **`corpus_mode` parameter.** Every run sets `corpus_mode` to `live` or
+   `demo`. This flag flows through the entire pipeline: Lead sets it,
+   Librarian enforces it, Drafter and Auditor receive it. On `live` runs,
+   demo-sourced evidence is forbidden; on `demo` runs, it is allowed.
+5. **Demo data never leaks.** Anything derived from the Acme sample corpus or
+   Relay sample corpus is watermarked "DEMO — Acme sample data" or
+   "DEMO — Relay sample data" respectively, and is never cited on a `live` run.
+6. **An honest "no" is a 🟢.** A documented absence ("no bug bounty program")
    is evidence, not a gap. A guess is a liability.

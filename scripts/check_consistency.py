@@ -226,6 +226,49 @@ for f in SURFACES:
 check("site.json businessName is TrustDeck",
       json.loads(read("site/site.json"))["businessName"] == "TrustDeck")
 
+DEMO_WATERMARKS = ("DEMO — Acme sample data", "DEMO — Relay sample data")
+
+print("== corpus_mode guard — demo watermark integrity ==")
+# Demo artifacts must self-identify with a watermark or demo category.
+# Non-demo output artifacts must NOT carry demo watermarks.
+# Documentation files (agents/*.md, pricing.json, marketplace-listing.md)
+# are exempt — they describe the rules rather than being output artifacts.
+
+# 1. Check that answer library JSON entries carry demo watermarks or category.
+alib = json.loads(read("demo/acme-answer-library.json"))
+for e in alib:
+    cat = e.get("category", "")
+    check(f"acme library entry {e['question_id']} has Demo category",
+          "Demo" in cat, f"got category={cat!r}")
+
+rlib = json.loads(read("relay-answer-library.json"))
+for e in rlib:
+    wm = e.get("watermark", "")
+    check(f"relay library entry {e['question_id']} has demo watermark",
+          wm == "DEMO — Relay sample data", f"got watermark={wm!r}")
+
+# 2. Check that demo benchmark memos properly declare themselves.
+BENCHMARK_MEMOS = {
+    "benchmark/caiq-lite-benchmark-memo.md": "Acme sample",
+    "benchmark/caiq-lite-benchmark-onboarded-memo.md": "Acme sample",
+}
+for f, expected in BENCHMARK_MEMOS.items():
+    s = read(f)
+    check(f"{f} declares sample data source", expected in s)
+
+# 3. Check no demo watermark in non-demo output artifacts.
+#    These are actual run outputs that should never reference demo data.
+LIVE_OUTPUT_ARTIFACTS = (
+    "benchmark/caiq-lite-benchmark.csv",
+    "benchmark/caiq-lite-benchmark-completed.csv",
+    "benchmark/acme-corpus-tier2-additions.md",
+)
+for f in LIVE_OUTPUT_ARTIFACTS:
+    s = read(f)
+    hits = [w for w in DEMO_WATERMARKS if w in s]
+    check(f"{f} — no demo watermark in live output artifact",
+          not hits, f"found {hits}")
+
 print()
 if FAILURES:
     print(f"{len(FAILURES)} consistency check(s) FAILED")
