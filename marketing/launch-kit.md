@@ -90,8 +90,8 @@ question. Its per-question verdicts ship in the repo as JSON.
 evidence, the whole answer drops from green to yellow. It downgraded four
 answers in the demo run for exactly this.
 
-- Benchmark: CAIQ-Lite, 124 questions. Cold corpus: 56/124 answered with
-citations (45%). After a 45-minute structured interview: 118/124 (95%). The
+- Benchmark: CAIQ-Lite, 124 questions. Cold corpus: 55/124 answered with
+citations (44%). After a 45-minute structured interview: 118/124 (95%). The
 six left over are honest, listed gaps. Legal questions always route to a human.
 
 - We test our collateral like code: CI fails the build when any published
@@ -135,7 +135,7 @@ commit link — that thread becomes the best ad on the page.
 
 > Benchmark on CAIQ-Lite (124 questions):
 >
-> Cold corpus → 56/124 answered with citations (45%).
+> Cold corpus → 55/124 answered with citations (44%).
 > After one ~45-min structured interview → 118/124 (95%).
 >
 > The 6 left over are honest, listed gaps. An evidenced "no" counts as done — auditors trust vendors who know what they lack.
@@ -187,7 +187,7 @@ plausible-sounding RBAC claim the evidence didn't support. Answers with no
 basis are routed to you, never guessed. Legal and insurance questions always
 go to a human.
 
-On the CAIQ-Lite benchmark (124 questions), it answered 56/124 with citations
+On the CAIQ-Lite benchmark (124 questions), it answered 55/124 with citations
 from a cold corpus, and 118/124 after a 45-minute structured interview — with
 the remaining six surfaced as honest, documented gaps.
 
@@ -222,7 +222,7 @@ each draft against the cited evidence and deletes overclaims before you see
 them. Answers with no basis are routed to you, never guessed; legal questions
 always go to a human.
 
-Benchmark (CAIQ-Lite, 124 questions): 56/124 answered with citations cold,
+Benchmark (CAIQ-Lite, 124 questions): 55/124 answered with citations cold,
 118/124 after a 45-minute onboarding interview. Every number is reproducible
 from the public repo, and CI fails the build if any published figure stops
 matching the artifacts. You get your original file back, filled in, plus a
@@ -271,7 +271,7 @@ welcome there; still disclose):
 >
 > So the product is five agents, and the one that matters is a hostile
 > Auditor that deletes any claim the cited evidence doesn't support. In the
-> live demo run it removed two overclaims before output. Benchmark: 56/124
+> live demo run it removed two overclaims before output. Benchmark: 55/124
 > CAIQ-Lite questions answered with citations from a cold corpus, 118/124
 > after a 45-minute onboarding interview. Unanswerable questions come back as
 > honest, documented gaps.
@@ -294,7 +294,7 @@ salesiness; no price talk; lead with the benchmark and the honest-no
 philosophy; read the sub's self-promo rules before posting):
 
 > **Title:** Benchmarked an LLM agent pipeline on CAIQ-Lite (124 questions):
-> 45% cited cold, 95% after a structured interview, zero fabrications — the
+> 44% cited cold, 95% after a structured interview, zero fabrications — the
 > design choice that mattered was a hostile auditor agent
 >
 > **Body:**
@@ -316,7 +316,7 @@ philosophy; read the sub's self-promo rules before posting):
 > (evidence existed elsewhere in the corpus but wasn't cited — so it goes).
 > If any sub-question lacks evidence, the whole answer is downgraded.
 >
-> CAIQ-Lite results: 56/124 answered with citations from a 12-doc cold
+> CAIQ-Lite results: 55/124 answered with citations from a 12-doc cold
 > corpus; 118/124 after a ~45-minute structured interview; remaining 6
 > surfaced as documented gaps. All artifacts (corpus, answers, per-question
 > auditor verdicts, memos) are public, and CI fails the repo build if the

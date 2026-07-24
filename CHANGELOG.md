@@ -10,8 +10,8 @@
 - Zero fabrications — every answer is confidence-tagged 🟢/🟡/🔴
 
 **Benchmark (CAIQ-Lite, 124 questions, Acme sample corpus):**
-- 45% auto-answered with citations (56/124)
-- 55% surfaced as gaps (68/124) — answer once, reuse forever
+- 44% auto-answered with citations (55/124)
+- 56% surfaced as gaps (69/124) — answer once, reuse forever
 - 0% inferred — no silent guesses
 
 **Knowledge assets included:**
@@ -20,8 +20,7 @@
 - Zero Trust reference index (Microsoft ZTA, Maester, ADPulse, AWS ZTA)
 
 **Pipeline:**
-- Stripe payment link: https://buy.stripe.com/5kQ6oHdYVd0PgVCddDeME00
-- Price: $29 one-time at launch
+- Price: $29 first 25 buyers → $58 through 100 → $79 final
 
 **Roadmap (next up):**
 - SIG Lite question mapping

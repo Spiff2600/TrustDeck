@@ -10,7 +10,7 @@ so you can judge the quality before buying. Tiers 2–3 ship with the product:
   secure development, vulnerability management, data classification,
   supply chain, resilience, and portability. Required before a full
   CAIQ-class questionnaire; this is the interview behind the benchmark's
-  jump from [45% to 95% auto-answered](benchmark/caiq-lite-benchmark-onboarded-memo.md).
+  jump from [44% to 95% auto-answered](benchmark/caiq-lite-benchmark-onboarded-memo.md).
 - **Tier 3 — AI add-on (Q45–Q46, ~5 min):** AI/LLM usage and governance,
   aligned with CSA's AI Controls Matrix / AI-CAIQ — increasingly standard in
   enterprise reviews.

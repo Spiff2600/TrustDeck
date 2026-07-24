@@ -16,7 +16,7 @@ Your review time: ~12 min   (manual baseline: ~496 min)
 
 Cold start vs onboarded — same 124 questions, same product:
 
-  Cold corpus (12 docs) ......... 56 🟢 (45%) · ~272 min review
+  Cold corpus (12 docs) ......... 55 🟢 (44%) · ~276 min review
   After Tier 1+2 interview ...... 118 🟢 (95%) · ~12 min review
 
 The interview closed 63 of 69 gaps in one ~45-minute session. That includes
